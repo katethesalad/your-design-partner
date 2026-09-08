@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 const links = [
   { to: "/work", label: "Work" },
@@ -14,8 +15,12 @@ export function SiteHeader() {
   return (
     <nav className="sticky top-0 z-50 border-b border-foreground/5 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="font-display text-xl font-bold italic tracking-tight">
-          Sophie Arlo
+        <Link to="/" className="flex items-center">
+          <img
+            src={logoAsset.url}
+            alt="Kate logo"
+            className="h-8 w-auto"
+          />
         </Link>
 
         <div className="hidden items-center gap-8 text-sm font-medium md:flex">
