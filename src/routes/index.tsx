@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { FeaturedWork } from "@/components/featured-work";
 import workMeadow from "@/assets/work-meadow.jpg";
 import workCity from "@/assets/work-city.jpg";
+import heroArtwork from "@/assets/sophie-arlo-hero-art.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,13 +31,18 @@ function Index() {
         <div className="blob-shape absolute -left-20 top-0 -z-10 size-64 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-petal opacity-60 blur-xl" />
         <div className="blob-shape absolute -right-10 top-20 -z-10 size-48 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-sun opacity-60 blur-xl [animation-delay:2s]" />
 
-        <div className="rise-in mx-auto max-w-3xl">
+        <div className="rise-in mx-auto w-full max-w-5xl">
           <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
             Independent Graphic Designer
           </span>
-          <h1 className="mb-6 text-balance font-display text-5xl italic leading-[0.9] md:text-7xl">
-            Sophie <span className="text-accent">Arlo</span> creates tactile visual identities.
-          </h1>
+          <h1 className="sr-only">Sophie Arlo creates tactile visual identities</h1>
+          <img
+            src={heroArtwork.url}
+            alt="Sophie Arlo creates tactile visual identities, illustrated with hand-drawn pastel shapes"
+            width={1920}
+            height={1119}
+            className="mx-auto mb-6 h-auto w-full"
+          />
           <p className="mx-auto mb-10 max-w-[32ch] text-pretty text-lg leading-relaxed text-muted-foreground">
             Blending organic illustration with editorial precision to build brands that feel human
             and lived-in.
