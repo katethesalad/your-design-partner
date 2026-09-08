@@ -8,3 +8,4 @@
 - [ ] Design system tokens in src/styles.css matching chosen direction
 - [ ] Per-route SEO head metadata
 - [ ] Generate imagery matching the chosen direction
+- [ ] Fix all current preview typecheck errors, including unresolved Pricing, Art, and Contact links
