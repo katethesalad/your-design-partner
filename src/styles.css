@@ -97,12 +97,12 @@
   --lilac-foreground: oklch(0.223 0.008 75);
   --sand: oklch(0.925 0.032 80);
 
-  /* Logo confetti colours — sampled from the uploaded Kate. logo artwork */
-  --logo-orange: #f6ad7b;
-  --logo-yellow: #f6e58b;
-  --logo-pink: #f8b4c4;
-  --logo-lavender: #d7c2f5;
-  --logo-cream: #f7f3eb;
+  /* Logo confetti colours — exact brand values */
+  --logo-orange: #f58127;
+  --logo-yellow: #e0ad34;
+  --logo-pink: #cbaed3;
+  --logo-lavender: #cbaed3;
+  --logo-cream: #e0ad34;
 }
 
 @keyframes float-blob {
