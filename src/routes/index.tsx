@@ -38,14 +38,14 @@ function Index() {
           <h1 className="sr-only">Sophie Arlo creates tactile visual identities</h1>
           <div className="relative mx-auto mb-4">
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10">
-              <span className="confetti confetti-dot left-[8%] top-[19%] bg-primary [animation-delay:-1.4s]" />
-              <span className="confetti confetti-pill left-[19%] top-[68%] bg-lilac [animation-delay:-3.2s]" />
-              <span className="confetti confetti-diamond left-[31%] top-[10%] bg-sun [animation-delay:-2.1s]" />
-              <span className="confetti confetti-dot left-[44%] top-[79%] bg-petal [animation-delay:-4.6s]" />
-              <span className="confetti confetti-pill right-[38%] top-[16%] bg-primary [animation-delay:-.7s]" />
-              <span className="confetti confetti-diamond right-[24%] top-[72%] bg-lilac [animation-delay:-3.8s]" />
-              <span className="confetti confetti-dot right-[12%] top-[29%] bg-sun [animation-delay:-2.7s]" />
-              <span className="confetti confetti-pill right-[6%] top-[61%] bg-petal [animation-delay:-5.1s]" />
+              <span className="confetti confetti-dot left-[8%] top-[19%] bg-logo-orange [animation-delay:-1.4s]" />
+              <span className="confetti confetti-pill left-[19%] top-[68%] bg-logo-lavender [animation-delay:-3.2s]" />
+              <span className="confetti confetti-diamond left-[31%] top-[10%] bg-logo-yellow [animation-delay:-2.1s]" />
+              <span className="confetti confetti-dot left-[44%] top-[79%] bg-logo-pink [animation-delay:-4.6s]" />
+              <span className="confetti confetti-pill right-[38%] top-[16%] bg-logo-cream [animation-delay:-.7s]" />
+              <span className="confetti confetti-diamond right-[24%] top-[72%] bg-logo-orange [animation-delay:-3.8s]" />
+              <span className="confetti confetti-dot right-[12%] top-[29%] bg-logo-lavender [animation-delay:-2.7s]" />
+              <span className="confetti confetti-pill right-[6%] top-[61%] bg-logo-yellow [animation-delay:-5.1s]" />
             </div>
             <img
               src={heroArtwork.url}
