@@ -9,3 +9,4 @@
 - [x] Per-route SEO head metadata
 - [x] Generate imagery matching the chosen direction
 - [x] Fix all current preview typecheck errors, including unresolved Pricing, Art, and Contact links
+- [x] Tighten landing-page section spacing, enlarge the uploaded logo, and animate matching hero confetti
