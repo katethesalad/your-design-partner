@@ -168,21 +168,21 @@
 }
 
 @utility confetti-dot {
-  width: 0.45rem;
-  height: 0.45rem;
+  width: 0.25rem;
+  height: 0.25rem;
   border-radius: 9999px;
 }
 
 @utility confetti-pill {
-  width: 0.4rem;
-  height: 1rem;
+  width: 0.25rem;
+  height: 0.55rem;
   border-radius: 9999px;
 }
 
 @utility confetti-diamond {
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 0.15rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 0.1rem;
 }
 
 @utility hero-artwork {
