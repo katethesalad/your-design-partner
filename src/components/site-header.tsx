@@ -17,7 +17,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link to="/" className="flex items-center">
           <img
-            src={logoAsset.url}
+            src="/logo.png"
             alt="Kate logo"
             className="h-12 w-auto md:h-14"
           />
