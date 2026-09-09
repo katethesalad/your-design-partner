@@ -116,12 +116,64 @@
   }
 }
 
+@keyframes confetti-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-8deg);
+  }
+  35% {
+    transform: translate3d(8px, -14px, 0) rotate(12deg);
+  }
+  70% {
+    transform: translate3d(-6px, 8px, 0) rotate(24deg);
+  }
+}
+
+@keyframes artwork-breathe {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 @utility blob-shape {
   animation: float-blob 8s ease-in-out infinite alternate;
 }
 
 @utility rise-in {
   animation: slide-up 0.8s var(--ease-out-expo) both;
+}
+
+@utility confetti {
+  position: absolute;
+  display: block;
+  animation: confetti-drift 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@utility confetti-dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 9999px;
+}
+
+@utility confetti-pill {
+  width: 0.65rem;
+  height: 1.8rem;
+  border-radius: 9999px;
+}
+
+@utility confetti-diamond {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.2rem;
+}
+
+@utility hero-artwork {
+  animation: artwork-breathe 6s ease-in-out infinite;
 }
 
 @layer base {
@@ -138,5 +190,14 @@
 
   ::selection {
     background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confetti,
+  .hero-artwork,
+  .blob-shape,
+  .rise-in {
+    animation: none;
   }
 }

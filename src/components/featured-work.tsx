@@ -13,7 +13,7 @@ function ArrowBadge() {
 
 export function FeaturedWork() {
   return (
-    <section className="px-4 pb-16 pt-8 md:px-6">
+    <section className="px-4 pb-10 pt-4 md:px-6">
       <div className="mx-auto max-w-6xl space-y-3">
         {/* Top pill bar */}
         <div className="flex items-center justify-between rounded-[28px] bg-card px-5 py-4 ring-1 ring-foreground/5">

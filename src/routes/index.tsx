@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main>
-      <header className="relative flex flex-col items-center px-6 pb-20 pt-16 text-center">
+      <header className="relative flex flex-col items-center overflow-hidden px-6 pb-10 pt-8 text-center">
         <div className="blob-shape absolute -left-20 top-0 -z-10 size-64 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-petal opacity-60 blur-xl" />
         <div className="blob-shape absolute -right-10 top-20 -z-10 size-48 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-sun opacity-60 blur-xl [animation-delay:2s]" />
 
@@ -36,13 +36,25 @@ function Index() {
             Independent Graphic Designer
           </span>
           <h1 className="sr-only">Sophie Arlo creates tactile visual identities</h1>
-          <img
-            src={heroArtwork.url}
-            alt="Sophie Arlo creates tactile visual identities, illustrated with hand-drawn pastel shapes"
-            width={1920}
-            height={1119}
-            className="mx-auto mb-6 h-auto w-full"
-          />
+          <div className="relative mx-auto mb-4">
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10">
+              <span className="confetti confetti-dot left-[8%] top-[19%] bg-primary [animation-delay:-1.4s]" />
+              <span className="confetti confetti-pill left-[19%] top-[68%] bg-lilac [animation-delay:-3.2s]" />
+              <span className="confetti confetti-diamond left-[31%] top-[10%] bg-sun [animation-delay:-2.1s]" />
+              <span className="confetti confetti-dot left-[44%] top-[79%] bg-petal [animation-delay:-4.6s]" />
+              <span className="confetti confetti-pill right-[38%] top-[16%] bg-primary [animation-delay:-.7s]" />
+              <span className="confetti confetti-diamond right-[24%] top-[72%] bg-lilac [animation-delay:-3.8s]" />
+              <span className="confetti confetti-dot right-[12%] top-[29%] bg-sun [animation-delay:-2.7s]" />
+              <span className="confetti confetti-pill right-[6%] top-[61%] bg-petal [animation-delay:-5.1s]" />
+            </div>
+            <img
+              src={heroArtwork.url}
+              alt="Kate logo illustrated with hand-drawn pastel confetti"
+              width={1920}
+              height={1119}
+              className="hero-artwork mx-auto h-auto w-full"
+            />
+          </div>
           <p className="mx-auto mb-10 max-w-[32ch] text-pretty text-lg leading-relaxed text-muted-foreground">
             Blending organic illustration with editorial precision to build brands that feel human
             and lived-in.
@@ -57,7 +69,7 @@ function Index() {
 
       <FeaturedWork />
 
-      <section className="space-y-12 px-6 py-20">
+      <section className="space-y-9 px-6 py-12">
         <div className="mx-auto flex max-w-6xl items-end justify-between border-b border-foreground/10 pb-4">
           <h2 className="font-display text-3xl italic">Selected Work</h2>
           <Link to="/work" className="font-mono text-xs text-muted-foreground hover:text-foreground">
@@ -112,7 +124,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="rounded-t-[3rem] bg-forest px-6 py-20 text-forest-foreground">
+      <section className="rounded-t-[3rem] bg-forest px-6 py-14 text-forest-foreground">
         <h2 className="mb-12 text-center font-display text-4xl italic">The Sketchbook Method</h2>
         <div className="mx-auto grid max-w-4xl gap-4">
           {[
@@ -139,7 +151,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-20">
+      <section className="bg-background px-6 py-14">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-8 font-display text-3xl italic">Investment</h2>
           <div className="grid gap-6 md:grid-cols-2">
