@@ -33,6 +33,14 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Find website files
+        run: |
+        echo "index.html files:"
+        find . -name index.html -type f -not -path './node_modules/*'
+        echo "All top-level folders:"
+        find . -maxdepth 2 -type d -not -path './node_modules*'
+
+
       - name: Check build output
         run: |
         echo "Current directory:"
