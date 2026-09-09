@@ -48,7 +48,7 @@ function Index() {
               <span className="confetti confetti-pill right-[6%] top-[61%] bg-logo-yellow [animation-delay:-5.1s]" />
             </div>
             <img
-              src={heroArtwork.url}
+              src="/sophie-arlo-hero-art.png.asset.json"
               alt="Kate logo illustrated with hand-drawn pastel confetti"
               width={1920}
               height={1119}
