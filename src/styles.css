@@ -46,6 +46,12 @@
   --color-lilac-foreground: var(--lilac-foreground);
   --color-sand: var(--sand);
 
+  --color-logo-orange: var(--logo-orange);
+  --color-logo-yellow: var(--logo-yellow);
+  --color-logo-pink: var(--logo-pink);
+  --color-logo-lavender: var(--logo-lavender);
+  --color-logo-cream: var(--logo-cream);
+
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "Lora", Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
