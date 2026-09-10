@@ -13,17 +13,9 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-foreground/5 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link to="/" className="flex items-center">
-          <img
-            src="/logo.png"
-            alt="Kate logo"
-            className="h-5 w-auto md:h-7"
-          />
-        </Link>
-
-        <div className="hidden items-center gap-8 text-sm font-medium md:flex">
+    <nav className="sticky top-0 z-50 px-3 pt-3 md:px-6 md:pt-4">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center rounded-full border border-card/60 bg-card/55 px-3 py-2 shadow-sm backdrop-blur-xl md:px-5">
+        <div className="hidden items-center gap-6 text-sm font-medium md:flex">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -34,6 +26,19 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
+        </div>
+
+        <div aria-hidden="true" className="md:hidden" />
+
+        <Link to="/" className="flex items-center justify-self-center">
+          <img
+            src="/logo.png"
+            alt="Kate logo"
+            className="h-5 w-auto md:h-7"
+          />
+        </Link>
+
+        <div className="hidden justify-self-end md:block">
           <Link
             to="/contact"
             className="rounded-full bg-foreground px-5 py-2 text-background transition-colors duration-300 hover:bg-primary"
@@ -47,14 +52,14 @@ export function SiteHeader() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="grid size-9 place-items-center rounded-full bg-foreground text-background md:hidden"
+          className="grid size-9 place-items-center justify-self-end rounded-full bg-foreground text-background md:hidden"
         >
           <span className="text-lg leading-none">{open ? "\u00d7" : "+"}</span>
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-foreground/5 px-6 pb-6 pt-2 md:hidden">
+        <div className="mx-auto mt-2 max-w-6xl rounded-3xl border border-card/60 bg-card/70 px-4 pb-4 pt-2 shadow-sm backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-1">
             {links.map((l) => (
               <Link
