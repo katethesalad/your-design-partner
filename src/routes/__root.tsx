@@ -123,7 +123,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen overflow-x-hidden bg-background font-body text-foreground">
+      <div className="min-h-screen overflow-x-clip bg-background font-body text-foreground">
         <SiteHeader />
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
