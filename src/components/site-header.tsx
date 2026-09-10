@@ -19,7 +19,7 @@ export function SiteHeader() {
           <img
             src="/logo.png"
             alt="Kate logo"
-            className="h-12 w-auto md:h-14"
+            className="h-9 w-auto md:h-11"
           />
         </Link>
 

@@ -167,10 +167,10 @@
   will-change: transform;
 }
 
-@utility confetti-dot {
+@utility confetti-triangle {
   width: 0.25rem;
   height: 0.25rem;
-  border-radius: 9999px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
 
 @utility confetti-pill {
@@ -179,10 +179,16 @@
   border-radius: 9999px;
 }
 
-@utility confetti-diamond {
+@utility confetti-pinched {
   width: 0.35rem;
   height: 0.35rem;
-  border-radius: 0.1rem;
+  clip-path: polygon(0 0, 50% 15%, 100% 0, 85% 50%, 100% 100%, 50% 85%, 0 100%, 15% 50%);
+}
+
+@utility confetti-starburst {
+  width: 0.35rem;
+  height: 0.35rem;
+  clip-path: polygon(50% 0, 59% 28%, 75% 7%, 76% 34%, 100% 25%, 82% 47%, 100% 63%, 72% 62%, 75% 100%, 53% 73%, 38% 100%, 37% 70%, 9% 79%, 28% 55%, 0 42%, 30% 36%, 18% 10%, 43% 29%);
 }
 
 @utility hero-artwork {
@@ -190,7 +196,7 @@
 }
 
 @media (min-width: 768px) {
-  .confetti-dot {
+  .confetti-triangle {
     width: 0.8rem;
     height: 0.8rem;
   }
@@ -200,10 +206,10 @@
     height: 1.8rem;
   }
 
-  .confetti-diamond {
+  .confetti-pinched,
+  .confetti-starburst {
     width: 1rem;
     height: 1rem;
-    border-radius: 0.2rem;
   }
 }
 
