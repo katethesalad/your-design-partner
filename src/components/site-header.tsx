@@ -14,7 +14,7 @@ export function SiteHeader() {
 
   return (
     <nav className="sticky top-0 z-50 px-3 pt-3 md:px-6 md:pt-4">
-      <div className="relative mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center rounded-full border border-card/60 bg-card/55 px-3 py-2 shadow-sm backdrop-blur-xl md:px-5">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center rounded-full border border-card/60 bg-card/55 py-2 pl-3 pr-2 shadow-sm backdrop-blur-xl md:pl-5 md:pr-2">
         <div className="hidden items-center gap-6 text-sm font-medium md:flex">
           {links.map((l) => (
             <Link
