@@ -54,6 +54,7 @@
 
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "Lora", Georgia, serif;
+  --font-sans: "DM Sans", "Google Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
@@ -240,18 +241,18 @@
 }
 
 .availability-dot {
-  background: oklch(0.72 0.19 155);
-  box-shadow: 0 0 6px 2px oklch(0.72 0.19 155 / 0.55);
+  background: oklch(0.62 0.1 155);
+  box-shadow: 0 0 4px 1px oklch(0.62 0.1 155 / 0.35);
   animation: availability-pulse 2s ease-in-out infinite;
 }
 
 @keyframes availability-pulse {
   0%,
   100% {
-    box-shadow: 0 0 4px 1px oklch(0.72 0.19 155 / 0.45);
+    box-shadow: 0 0 2px 1px oklch(0.62 0.1 155 / 0.25);
   }
   50% {
-    box-shadow: 0 0 8px 3px oklch(0.72 0.19 155 / 0.7);
+    box-shadow: 0 0 5px 2px oklch(0.62 0.1 155 / 0.45);
   }
 }
 
