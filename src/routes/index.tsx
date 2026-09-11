@@ -56,9 +56,6 @@ function Index() {
               className="hero-artwork mx-auto h-auto w-full"
             />
           </div>
-          <p className="mx-auto mb-10 max-w-[32ch] text-pretty text-lg leading-relaxed text-muted-foreground">
-
-          </p>
           <div className="flex justify-center gap-4">
             <div className="grid size-12 animate-bounce place-items-center rounded-full border border-foreground/10">
               <span className="font-mono text-xs opacity-40">&darr;</span>
