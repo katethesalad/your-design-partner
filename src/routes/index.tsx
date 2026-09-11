@@ -57,8 +57,7 @@ function Index() {
             />
           </div>
           <p className="mx-auto mb-10 max-w-[32ch] text-pretty text-lg leading-relaxed text-muted-foreground">
-            Blending organic illustration with editorial precision to build brands that feel human
-            and lived-in.
+
           </p>
           <div className="flex justify-center gap-4">
             <div className="grid size-12 animate-bounce place-items-center rounded-full border border-foreground/10">
