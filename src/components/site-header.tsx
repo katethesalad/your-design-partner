@@ -41,7 +41,7 @@ export function SiteHeader() {
         <div className="hidden justify-self-end md:block">
           <Link
             to="/contact"
-            className="rounded-full bg-foreground px-5 py-2 text-background transition-colors duration-300 hover:bg-primary"
+            className="rounded-full bg-[#e0ad34] px-5 py-2 text-background transition-colors duration-300 hover:bg-foreground"
           >
             Let's chat
           </Link>
