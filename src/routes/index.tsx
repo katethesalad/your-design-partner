@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Check, Sparkles, Phone, ArrowRight } from "lucide-react";
 import { FeaturedWork } from "@/components/featured-work";
 import workMeadow from "@/assets/work-meadow.jpg";
 import workCity from "@/assets/work-city.jpg";
@@ -148,53 +149,129 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-14">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="mb-8 font-display text-3xl italic">Investment</h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="space-y-6 rounded-[2rem] border border-foreground/5 bg-sun/40 p-8">
-              <div>
-                <h3 className="font-display text-2xl italic">Spark</h3>
-                <p className="text-sm text-muted-foreground">For startups and small ventures.</p>
+      <section className="px-4 py-14 sm:px-6">
+        <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-white px-6 py-14 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.15)] sm:px-12">
+          <div className="text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
+              004 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> INVESTMENT
+            </span>
+            <h2 className="mt-6 font-sans text-4xl font-semibold tracking-tight sm:text-5xl">
+              Design for Every Stage
+            </h2>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Whether you're starting small or scaling fast, there's a package that fits.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {/* Spark */}
+            <div className="flex flex-col rounded-[1.75rem] bg-muted p-8">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground/10">
+                <span className="h-2.5 w-2.5 rounded-full bg-foreground/60" />
               </div>
-              <div className="text-3xl font-medium italic">
+              <h3 className="mt-6 text-lg font-semibold">Spark</h3>
+              <p className="mt-1 text-sm text-muted-foreground">For startups and small ventures.</p>
+              <div className="mt-5 text-4xl font-semibold tracking-tight">
                 $2,400
-                <span className="ml-2 font-mono text-xs not-italic text-muted-foreground">USD</span>
+                <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
               </div>
-              <ul className="space-y-2 text-sm opacity-80">
-                <li>&mdash; Core Identity Pack</li>
-                <li>&mdash; Colour &amp; Type Guide</li>
-                <li>&mdash; Primary Wordmark</li>
+              <hr className="my-6 border-foreground/10" />
+              <p className="text-xs font-medium text-muted-foreground">What's included:</p>
+              <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
+                {["Core Identity Pack", "Colour & Type Guide", "Primary Wordmark"].map((f) => (
+                  <li key={f} className="flex items-center gap-2.5">
+                    <Check className="h-3.5 w-3.5 shrink-0 text-foreground" /> {f}
+                  </li>
+                ))}
               </ul>
               <Link
                 to="/pricing"
-                className="block w-full rounded-full bg-foreground py-4 text-center text-sm font-medium text-background"
+                className="mt-auto block w-full rounded-full bg-foreground py-3.5 text-center text-sm font-medium text-background transition-colors hover:bg-foreground/85"
               >
                 Start here
               </Link>
             </div>
 
-            <div className="space-y-6 rounded-[2rem] border border-foreground/5 bg-petal/40 p-8">
-              <div>
-                <h3 className="font-display text-2xl italic">Story</h3>
-                <p className="text-sm text-muted-foreground">Deep identity and collateral.</p>
+            {/* Story — most popular */}
+            <div className="relative flex flex-col rounded-[1.75rem] border border-foreground/10 bg-white p-8 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.18)]">
+              <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1 text-[10px] font-medium">
+                <Sparkles className="h-3 w-3" /> Most Popular
+              </span>
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-petal">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary" />
               </div>
-              <div className="text-3xl font-medium italic">
+              <h3 className="mt-6 text-lg font-semibold">Story</h3>
+              <p className="mt-1 text-sm text-muted-foreground">Deep identity and collateral.</p>
+              <div className="mt-5 text-4xl font-semibold tracking-tight">
                 $4,800
-                <span className="ml-2 font-mono text-xs not-italic text-muted-foreground">USD</span>
+                <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
               </div>
-              <ul className="space-y-2 text-sm opacity-80">
-                <li>&mdash; Full Brand Suite</li>
-                <li>&mdash; Custom Illustration Set</li>
-                <li>&mdash; Social Media Kit</li>
+              <hr className="my-6 border-foreground/10" />
+              <p className="text-xs font-medium text-muted-foreground">Everything in Spark, plus:</p>
+              <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
+                {["Full Brand Suite", "Custom Illustration Set", "Social Media Kit"].map((f) => (
+                  <li key={f} className="flex items-center gap-2.5">
+                    <Check className="h-3.5 w-3.5 shrink-0 text-foreground" /> {f}
+                  </li>
+                ))}
               </ul>
               <Link
                 to="/pricing"
-                className="block w-full rounded-full bg-primary py-4 text-center text-sm font-medium text-primary-foreground"
+                className="mt-auto block w-full rounded-full bg-foreground py-3.5 text-center text-sm font-medium text-background transition-colors hover:bg-foreground/85"
               >
-                Most loved
+                Get the Story package
               </Link>
             </div>
+
+            {/* Bloom */}
+            <div className="flex flex-col rounded-[1.75rem] bg-muted p-8">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground/10">
+                <span className="h-2.5 w-2.5 rounded-full bg-foreground/60" />
+              </div>
+              <h3 className="mt-6 text-lg font-semibold">Bloom</h3>
+              <p className="mt-1 text-sm text-muted-foreground">The full garden, end to end.</p>
+              <div className="mt-5 text-4xl font-semibold tracking-tight">
+                $8,900
+                <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
+              </div>
+              <hr className="my-6 border-foreground/10" />
+              <p className="text-xs font-medium text-muted-foreground">Everything in Story, plus:</p>
+              <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
+                {["Packaging & Print Design", "Art Direction Support", "3 Months of Design Care"].map((f) => (
+                  <li key={f} className="flex items-center gap-2.5">
+                    <Check className="h-3.5 w-3.5 shrink-0 text-foreground" /> {f}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/pricing"
+                className="mt-auto block w-full rounded-full bg-foreground py-3.5 text-center text-sm font-medium text-background transition-colors hover:bg-foreground/85"
+              >
+                Get the Bloom package
+              </Link>
+            </div>
+          </div>
+
+          {/* Consultation banner */}
+          <div className="mt-8 flex flex-col items-center rounded-[1.75rem] bg-[linear-gradient(120deg,#f9eec4,#f5d5ef_35%,#d9e4fb_70%,#fdf3d8)] px-8 py-10 text-center">
+            <div className="flex items-center gap-2">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/80 font-display text-lg italic">
+                K.
+              </span>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
+                <Phone className="h-4 w-4" />
+              </span>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">Not sure which package is right for you?</h3>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Book a free 30-minute intro call and we'll figure it out together.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-foreground/85"
+            >
+              Book a free consultation <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
