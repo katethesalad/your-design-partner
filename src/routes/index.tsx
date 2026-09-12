@@ -7,13 +7,13 @@ import heroArtwork from "@/assets/sophie-arlo-hero-art.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sophie Arlo — Graphic Designer & Illustrator" },
+      { title: "Kate" },
       {
         name: "description",
         content:
           "Independent graphic designer creating tactile, illustration-led brand identities. See selected work, my design process and pricing.",
       },
-      { property: "og:title", content: "Sophie Arlo — Graphic Designer & Illustrator" },
+      { property: "og:title", content: "Kate" },
       {
         property: "og:description",
         content:
@@ -36,7 +36,7 @@ function Index() {
             <span className="availability-dot size-1.5 rounded-full" />
             available for new projects
           </span>
-          <h1 className="sr-only">Sophie Arlo creates tactile visual identities</h1>
+          <h1 className="sr-only">Kate creates tactile visual identities</h1>
           <div className="relative mx-auto mb-4">
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10">
               <span className="confetti confetti-triangle left-[8%] top-[19%] bg-logo-orange [animation-delay:-1.4s]" />

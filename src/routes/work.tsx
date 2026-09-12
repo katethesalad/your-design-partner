@@ -7,17 +7,17 @@ import workEditorial from "@/assets/work-editorial.jpg";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Work — Sophie Arlo, Graphic Designer" },
+      { title: "Work — Kate" },
       {
         name: "description",
         content:
-          "Selected brand identity, packaging and editorial design projects by independent graphic designer Sophie Arlo.",
+          "Selected brand identity, packaging and editorial design projects by independent graphic designer Kate.",
       },
-      { property: "og:title", content: "Work — Sophie Arlo, Graphic Designer" },
+      { property: "og:title", content: "Work — Kate" },
       {
         property: "og:description",
         content:
-          "Selected brand identity, packaging and editorial design projects by independent graphic designer Sophie Arlo.",
+          "Selected brand identity, packaging and editorial design projects by independent graphic designer Kate.",
       },
     ],
   }),

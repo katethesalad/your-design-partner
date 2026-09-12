@@ -113,11 +113,11 @@ export function FeaturedWork() {
 
               <div className="relative flex w-fit items-center gap-3 rounded-full bg-card py-1.5 pl-1.5 pr-5">
                 <span className="grid size-9 place-items-center rounded-full bg-accent font-display text-sm text-accent-foreground">
-                  SA
+                  K
                 </span>
                 <span className="leading-tight">
                   <span className="block text-[11px] text-muted-foreground">Designer</span>
-                  <span className="block text-sm font-medium">Sophie Arlo</span>
+                  <span className="block text-sm font-medium">Kate</span>
                 </span>
               </div>
 

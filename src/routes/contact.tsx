@@ -3,15 +3,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Sophie Arlo, Graphic Designer" },
+      { title: "Contact — Kate" },
       {
         name: "description",
-        content: "Get in touch with Sophie Arlo about a graphic design, identity or illustration project.",
+        content: "Get in touch with Kate about a graphic design, identity or illustration project.",
       },
-      { property: "og:title", content: "Contact — Sophie Arlo, Graphic Designer" },
+      { property: "og:title", content: "Contact — Kate" },
       {
         property: "og:description",
-        content: "Get in touch with Sophie Arlo about a graphic design, identity or illustration project.",
+        content: "Get in touch with Kate about a graphic design, identity or illustration project.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -33,10 +33,10 @@ function ContactPage() {
           Tell me a little about your business, what you need and when you hope to begin.
         </p>
         <a
-          href="mailto:hello@sophiearlo.design"
+          href="mailto:katekhanbek@gmail.com"
           className="mx-auto mt-10 block w-fit rounded-full bg-foreground px-8 py-4 font-medium text-background transition-colors hover:bg-primary"
         >
-          hello@sophiearlo.design
+          katekhanbek@gmail.com
         </a>
         <Link
           to="/pricing"
