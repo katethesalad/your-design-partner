@@ -15,10 +15,10 @@ export function SiteFooter() {
       </p>
 
       <a
-        href="mailto:hello@sophiearlo.design"
+        href="mailto:katekhanbek@gmail.com"
         className="mx-auto block w-fit border-b-2 border-foreground/10 pb-2 text-2xl font-medium transition-colors hover:border-primary"
       >
-        hello@sophiearlo.design
+        katekhanbek@gmail.com
       </a>
 
       <div className="flex justify-center gap-6 pt-10">

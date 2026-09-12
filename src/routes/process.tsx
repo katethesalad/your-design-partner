@@ -3,13 +3,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
-      { title: "My Design Process — Sophie Arlo" },
+      { title: "My Design Process — Kate" },
       {
         name: "description",
         content:
           "How I work: discovery, sketching, refining and handover. A clear four-step design process so you always know what happens next.",
       },
-      { property: "og:title", content: "My Design Process — Sophie Arlo" },
+      { property: "og:title", content: "My Design Process — Kate" },
       {
         property: "og:description",
         content:

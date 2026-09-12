@@ -6,15 +6,15 @@ import artFour from "@/assets/art-4.jpg";
 export const Route = createFileRoute("/art")({
   head: () => ({
     meta: [
-      { title: "Art — Sophie Arlo" },
+      { title: "Art — Kate" },
       {
         name: "description",
-        content: "A separate collection of personal artwork and illustration experiments by Sophie Arlo.",
+        content: "A separate collection of personal artwork and illustration experiments by Kate.",
       },
-      { property: "og:title", content: "Art — Sophie Arlo" },
+      { property: "og:title", content: "Art — Kate" },
       {
         property: "og:description",
-        content: "A separate collection of personal artwork and illustration experiments by Sophie Arlo.",
+        content: "A separate collection of personal artwork and illustration experiments by Kate.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

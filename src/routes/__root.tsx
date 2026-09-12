@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sophie Arlo — Graphic Designer & Illustrator" },
+      { title: "Kate" },
       {
         name: "description",
         content:
           "Independent graphic designer building warm, illustration-led brand identities for small businesses.",
       },
-      { name: "author", content: "Sophie Arlo" },
+      { name: "author", content: "Kate" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
