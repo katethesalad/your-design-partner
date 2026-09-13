@@ -54,7 +54,7 @@ function PricingPage() {
           {packages.map((item) => (
             <article key={item.name} className={`space-y-7 rounded-[2rem] p-8 ${item.tint}`}>
               <div>
-                <h2 className="font-display text-3xl italic">{item.name}</h2>
+                <h2 className="font-sans text-3xl italic">{item.name}</h2>
                 <p className="mt-2 text-muted-foreground">{item.intro}</p>
               </div>
               <p className="text-3xl font-medium italic">{item.price}</p>

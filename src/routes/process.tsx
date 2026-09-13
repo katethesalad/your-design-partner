@@ -71,14 +71,14 @@ function ProcessPage() {
                 <span className="font-mono text-xs text-primary">{s.n}</span>
                 <span className="font-mono text-xs text-muted-foreground">{s.detail}</span>
               </div>
-              <h2 className="mt-4 font-display text-2xl italic">{s.title}</h2>
+              <h2 className="mt-4 font-sans text-2xl italic">{s.title}</h2>
               <p className="mt-3 text-pretty leading-relaxed">{s.body}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-16 rounded-[2rem] bg-forest p-10 text-center text-forest-foreground">
-          <h2 className="font-display text-3xl italic">Sound like a good fit?</h2>
+          <h2 className="font-sans text-3xl italic">Sound like a good fit?</h2>
           <p className="mx-auto mt-3 max-w-[40ch] text-pretty opacity-80">
             Have a look at what each kind of project costs, or just send me a note about what you're
             making.

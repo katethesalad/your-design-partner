@@ -69,7 +69,7 @@ function Index() {
 
       <section className="space-y-9 px-6 py-12">
         <div className="mx-auto flex max-w-6xl items-end justify-between border-b border-foreground/10 pb-4">
-          <h2 className="font-display text-3xl italic">Selected Work</h2>
+          <h2 className="font-sans text-3xl italic">Selected Work</h2>
           <Link to="/work" className="font-mono text-xs text-muted-foreground hover:text-foreground">
             (view all)
           </Link>
@@ -123,7 +123,7 @@ function Index() {
       </section>
 
       <section className="rounded-t-[3rem] bg-forest px-6 py-14 text-forest-foreground">
-        <h2 className="mb-12 text-center font-display text-4xl italic">The Sketchbook Method</h2>
+        <h2 className="mb-12 text-center font-sans text-4xl italic">The Sketchbook Method</h2>
         <div className="mx-auto grid max-w-4xl gap-4">
           {[
             ["01 // Discovery", "We sit down for coffee and dig into your brand's soul."],
