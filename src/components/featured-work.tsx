@@ -15,35 +15,6 @@ export function FeaturedWork() {
   return (
     <section className="px-4 pb-10 pt-4 md:px-6">
       <div className="mx-auto max-w-6xl space-y-3">
-        {/* Top pill bar */}
-        <div className="flex items-center justify-between rounded-[28px] bg-card px-5 py-4 ring-1 ring-foreground/5">
-          <div className="flex items-center gap-3">
-            <span className="rounded-full px-4 py-2 text-xs font-medium uppercase tracking-wider ring-1 ring-foreground/15">
-              Popular
-            </span>
-            <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.6">
-              <path d="M12 5v14M6 13l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-
-          <div className="text-center">
-            <div className="font-display text-lg">Projects</div>
-            <div className="mt-1 flex justify-center gap-1.5">
-              <span className="size-1.5 rounded-full bg-foreground" />
-              <span className="size-1.5 rounded-full bg-foreground" />
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.6">
-              <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span className="rounded-full px-4 py-2 text-xs font-medium uppercase tracking-wider ring-1 ring-foreground/15">
-              Featured
-            </span>
-          </div>
-        </div>
-
         {/* Main panel */}
         <div className="rounded-[28px] bg-card p-5 ring-1 ring-foreground/5 md:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
