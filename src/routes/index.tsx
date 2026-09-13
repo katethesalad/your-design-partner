@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { Check, Sparkles, Phone, ArrowRight } from "lucide-react";
 import { FeaturedWork } from "@/components/featured-work";
+import { cn } from "@/lib/utils";
 import heroArtwork from "@/assets/sophie-arlo-hero-art.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -22,6 +24,157 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
+
+const phases = [
+  {
+    phase: "PHASE 1",
+    title: "Discovery & Planning",
+    duration: "1–2 weeks",
+    desc: "We dig into your brand's story, audience, and goals through a questionnaire and a kick-off call.",
+    details: [
+      "Brand questionnaire & goals",
+      "Audience & competitor research",
+      "Creative direction moodboard",
+      "Project scope & timeline",
+    ],
+  },
+  {
+    phase: "PHASE 2",
+    title: "Strategy & Concepts",
+    duration: "1–2 weeks",
+    desc: "I translate research into a clear brand position and explore 2–3 visual routes on paper.",
+    details: [
+      "Brand strategy & positioning",
+      "Hand-drawn concept sketches",
+      "Colour & typography directions",
+      "Moodboard refinement",
+    ],
+  },
+  {
+    phase: "PHASE 3",
+    title: "Design & Craft",
+    duration: "3–5 weeks",
+    desc: "The chosen route becomes a full identity system: logo, type, colour, patterns, and mockups.",
+    details: [
+      "Logo system & variations",
+      "Typography & colour palette",
+      "Pattern, illustration & textures",
+      "Brand mockups & applications",
+    ],
+  },
+  {
+    phase: "PHASE 4",
+    title: "Refinement & Feedback",
+    duration: "1–2 weeks",
+    desc: "We review the designs together, gather feedback, and fine-tune every detail until it feels right.",
+    details: [
+      "Presentation of the full identity",
+      "Two rounds of revisions",
+      "Final polish & quality checks",
+      "Approval & sign-off",
+    ],
+  },
+  {
+    phase: "PHASE 5",
+    title: "Delivery & Launch",
+    duration: "1 week",
+    desc: "You receive production-ready files, guidelines, and support to launch with confidence.",
+    details: [
+      "Organised file exports",
+      "Brand guidelines PDF",
+      "Social templates & assets",
+      "Launch support & handoff",
+    ],
+  },
+];
+
+function ProcessSection() {
+  const [active, setActive] = useState(0);
+  const current = phases[active]!;
+
+  return (
+    <section className="px-4 py-14 sm:px-6">
+      <h2 className="mb-12 text-center font-sans text-4xl italic">The Sketchbook Method</h2>
+
+      <div className="relative mx-auto max-w-6xl">
+        <div className="relative -mx-4 overflow-x-auto px-4 pb-8 pt-2 snap-x sm:-mx-6 sm:px-6">
+          <div className="relative flex min-w-max items-start justify-between gap-6">
+            <div className="absolute left-0 right-0 top-[4.25rem] h-px bg-foreground/10" />
+
+            {phases.map((p, i) => {
+              const isActive = active === i;
+              return (
+                <button
+                  key={p.phase}
+                  onClick={() => setActive(i)}
+                  className="group relative flex min-w-[170px] flex-1 snap-start flex-col items-center text-center"
+                >
+                  <span
+                    className={cn(
+                      "rounded-full px-4 py-1.5 text-[11px] font-medium uppercase tracking-wide transition-colors",
+                      isActive
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-card text-foreground ring-1 ring-foreground/10"
+                    )}
+                  >
+                    {p.phase}
+                  </span>
+
+                  <span
+                    className={cn(
+                      "relative z-10 mt-4 grid size-10 place-items-center rounded-full border-2 transition-colors",
+                      isActive
+                        ? "border-primary bg-primary text-primary-foreground"
+                        : "border-foreground/20 bg-background text-foreground group-hover:border-foreground/40"
+                    )}
+                    aria-hidden="true"
+                  >
+                    <span className="size-2.5 rounded-full bg-current" />
+                  </span>
+
+                  <span className="mt-5 block text-sm font-semibold uppercase tracking-wide">
+                    {p.title}
+                  </span>
+                  <span className="mt-1 block text-xs text-muted-foreground">
+                    {p.duration}
+                  </span>
+                  <span className="mt-3 block max-w-[200px] text-sm leading-relaxed text-muted-foreground">
+                    {p.desc}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div
+          key={active}
+          className="mt-2 rounded-[2rem] bg-card p-6 ring-1 ring-foreground/5 animate-fade-in sm:p-8"
+        >
+          <h3 className="font-sans text-2xl font-semibold">{current.title}</h3>
+          <p className="mt-2 text-sm text-muted-foreground">{current.desc}</p>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+            {current.details.map((detail) => (
+              <li key={detail} className="flex items-start gap-3 text-sm">
+                <Check className="mt-0.5 size-4 shrink-0 text-primary" />
+                {detail}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            to="/process"
+            className="inline-flex rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground ring-1 ring-foreground/10 transition-colors hover:bg-secondary"
+          >
+            See the full process
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function Index() {
   return (
@@ -66,32 +219,7 @@ function Index() {
       <FeaturedWork />
 
 
-      <section className="px-6 py-14">
-        <h2 className="mb-12 text-center font-sans text-4xl italic">The Sketchbook Method</h2>
-        <div className="mx-auto grid max-w-4xl gap-4">
-          {[
-            ["01 // Discovery", "We sit down for coffee and dig into your brand's soul."],
-            ["02 // Sketching", "I move to paper first. Hundreds of messy, honest marks."],
-            ["03 // Refining", "The best ideas get polished into a digital reality."],
-          ].map(([step, text]) => (
-            <div
-              key={step}
-              className="space-y-4 rounded-3xl border border-background/10 bg-background/5 p-8"
-            >
-              <span className="font-mono text-xs text-primary">{step}</span>
-              <h3 className="text-xl">{text}</h3>
-            </div>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <Link
-            to="/process"
-            className="inline-flex rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground"
-          >
-            See the full process
-          </Link>
-        </div>
-      </section>
+      <ProcessSection />
 
       <section className="px-4 py-14 sm:px-6">
         <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-white px-6 py-14 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.15)] sm:px-12">
