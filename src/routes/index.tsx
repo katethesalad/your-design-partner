@@ -29,6 +29,7 @@ const phases = [
   {
     shape: "shape-triangle",
     color: "bg-[#e0ad34]",
+    colorMuted: "bg-[#e0ad34]/40",
     phase: "PHASE 1",
     title: "Discovery & Planning",
     duration: "1–2 weeks",
@@ -43,6 +44,7 @@ const phases = [
   {
     shape: "shape-pinched",
     color: "bg-[#cbaed3]",
+    colorMuted: "bg-[#cbaed3]/40",
     phase: "PHASE 2",
     title: "Strategy & Concepts",
     duration: "1–2 weeks",
@@ -57,6 +59,7 @@ const phases = [
   {
     shape: "shape-starburst",
     color: "bg-[#f58127]",
+    colorMuted: "bg-[#f58127]/40",
     phase: "PHASE 3",
     title: "Design & Craft",
     duration: "3–5 weeks",
@@ -71,6 +74,7 @@ const phases = [
   {
     shape: "shape-triangle",
     color: "bg-[#e0ad34]",
+    colorMuted: "bg-[#e0ad34]/40",
     phase: "PHASE 4",
     title: "Refinement & Feedback",
     duration: "1–2 weeks",
@@ -85,6 +89,7 @@ const phases = [
   {
     shape: "shape-starburst",
     color: "bg-[#f58127]",
+    colorMuted: "bg-[#f58127]/40",
     phase: "PHASE 5",
     title: "Delivery & Launch",
     duration: "1 week",
@@ -121,10 +126,8 @@ function ProcessSection() {
                 >
                   <span
                     className={cn(
-                      "rounded-full px-4 py-1.5 text-[11px] font-medium uppercase tracking-wide transition-colors",
-                      isActive
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-card text-foreground ring-1 ring-foreground/10"
+                      "rounded-full px-4 py-1.5 text-[11px] font-medium uppercase tracking-wide transition-colors text-foreground",
+                      isActive ? p.color : p.colorMuted
                     )}
                   >
                     {p.phase}
@@ -132,15 +135,15 @@ function ProcessSection() {
 
                   <span
                     className={cn(
-                      "relative z-10 mt-4 grid size-12 place-items-center rounded-full bg-white ring-1 ring-foreground/10 transition-all",
+                      "relative z-10 mt-4 size-12 transition-all",
+                      p.shape,
+                      p.color,
                       isActive
-                        ? "scale-110 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.25)] ring-foreground/20"
-                        : "group-hover:scale-105"
+                        ? "scale-110 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.25)]"
+                        : "opacity-80 group-hover:scale-105"
                     )}
                     aria-hidden="true"
-                  >
-                    <span className={cn("size-5", p.shape, p.color)} />
-                  </span>
+                  />
 
                   <span className="mt-5 block text-sm font-semibold uppercase tracking-wide">
                     {p.title}
