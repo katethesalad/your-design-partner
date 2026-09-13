@@ -113,16 +113,47 @@ function ProcessSection() {
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-10">
         <div className="relative overflow-x-auto px-2 pb-8 pt-2 snap-x sm:px-6">
-          <div className="relative flex min-w-max items-start justify-between gap-6">
-            <div className="absolute left-0 right-0 top-[4.25rem] h-px bg-foreground/10" />
+          <div className="relative flex min-w-max items-start justify-between gap-6 py-16">
+            <svg
+              className="pointer-events-none absolute inset-x-0 top-1/2 h-60 w-full -translate-y-1/2"
+              viewBox="0 0 1000 240"
+              preserveAspectRatio="none"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="processWave" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#e0ad34" />
+                  <stop offset="50%" stopColor="#cbaed3" />
+                  <stop offset="100%" stopColor="#f58127" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M0 120 C 125 20, 125 220, 250 120 C 375 20, 375 220, 500 120 C 625 20, 625 220, 750 120 C 875 20, 875 220, 1000 120"
+                stroke="url(#processWave)"
+                strokeWidth="3"
+                strokeDasharray="8 12"
+                className="opacity-30"
+              />
+              <path
+                d="M0 120 C 125 20, 125 220, 250 120 C 375 20, 375 220, 500 120 C 625 20, 625 220, 750 120 C 875 20, 875 220, 1000 120"
+                stroke="url(#processWave)"
+                strokeWidth="1.5"
+              />
+            </svg>
 
             {phases.map((p, i) => {
               const isActive = active === i;
+              const isUp = i % 2 === 0;
               return (
                 <button
                   key={p.phase}
                   onClick={() => setActive(i)}
-                  className="group relative flex min-w-[170px] flex-1 snap-start flex-col items-center text-center"
+                  className={cn(
+                    "group relative flex min-w-[170px] flex-1 snap-start flex-col items-center text-center transition-transform duration-300",
+                    isUp ? "-translate-y-10 hover:-translate-y-12" : "translate-y-10 hover:translate-y-12"
+                  )}
                 >
                   <span
                     className={cn(
@@ -135,15 +166,13 @@ function ProcessSection() {
 
                   <span
                     className={cn(
-                      "relative z-10 mt-4 size-12 transition-all",
-                      p.shape,
-                      p.color,
-                      isActive
-                        ? "scale-110 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.25)]"
-                        : "opacity-80 group-hover:scale-105"
+                      "relative z-10 mt-4 flex size-14 items-center justify-center rounded-full bg-background shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] ring-1 ring-foreground/5 transition-all",
+                      isActive ? "scale-110" : "opacity-90 group-hover:scale-105"
                     )}
                     aria-hidden="true"
-                  />
+                  >
+                    <span className={cn("size-8 transition-all", p.shape, p.color)} />
+                  </span>
 
                   <span className="mt-5 block text-sm font-semibold uppercase tracking-wide">
                     {p.title}
