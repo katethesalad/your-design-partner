@@ -1,5 +1,3 @@
-import { Link } from "@tanstack/react-router";
-
 export function SiteFooter() {
   return (
     <footer className="mx-auto max-w-6xl space-y-8 px-6 py-14 text-center">
