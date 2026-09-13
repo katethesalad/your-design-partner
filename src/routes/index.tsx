@@ -33,7 +33,7 @@ function Index() {
         <div className="blob-shape absolute -right-10 top-20 -z-10 size-48 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-sun opacity-60 blur-xl [animation-delay:2s]" />
 
         <div className="rise-in mx-auto w-full max-w-5xl">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-card/60 px-4 py-1.5 font-sans text-[11px] lowercase tracking-wide text-foreground backdrop-blur-md">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium lowercase tracking-wide text-muted-foreground">
             <span className="availability-dot size-1.5 rounded-full" />
             available for new projects
           </span>
