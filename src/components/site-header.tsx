@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logoAsset from "@/assets/logo.png.asset.json";
 
 const links = [
@@ -11,10 +11,24 @@ const links = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <nav className="sticky top-0 z-50 px-3 pt-3 md:px-6 md:pt-4">
-      <div className="relative mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center rounded-full border border-card/60 bg-card/55 py-2 pl-3 pr-2 shadow-sm backdrop-blur-xl md:pl-5 md:pr-2">
+      <div
+        className={`relative mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center py-2 pl-3 pr-2 transition-all duration-300 md:pl-5 md:pr-2 ${
+          scrolled
+            ? "rounded-full border border-card/60 bg-card/30 shadow-sm backdrop-blur-xl"
+            : "bg-transparent"
+        }`}
+      >
         <div className="hidden items-center gap-6 text-sm font-medium md:flex">
           {links.map((l) => (
             <Link
