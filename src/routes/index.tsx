@@ -66,7 +66,7 @@ function Index() {
       <FeaturedWork />
 
 
-      <section className="rounded-t-[3rem] bg-forest px-6 py-14 text-forest-foreground">
+      <section className="px-6 py-14">
         <h2 className="mb-12 text-center font-sans text-4xl italic">The Sketchbook Method</h2>
         <div className="mx-auto grid max-w-4xl gap-4">
           {[
