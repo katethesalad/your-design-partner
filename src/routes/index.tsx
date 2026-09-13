@@ -196,10 +196,7 @@ function Index() {
               <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1 text-[10px] font-medium">
                 <Sparkles className="h-3 w-3" /> Most Popular
               </span>
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-petal">
-                <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-              </div>
-              <h3 className="mt-6 text-lg font-semibold">Story</h3>
+            <h3 className="text-lg font-semibold">Story</h3>
               <p className="mt-1 text-sm text-muted-foreground">Deep identity and collateral.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
                 $4,800
@@ -223,11 +220,8 @@ function Index() {
             </div>
 
             {/* Bloom */}
-            <div className="flex flex-col rounded-[1.75rem] bg-muted p-8">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground/10">
-                <span className="h-2.5 w-2.5 rounded-full bg-foreground/60" />
-              </div>
-              <h3 className="mt-6 text-lg font-semibold">Bloom</h3>
+            <div className="flex flex-col rounded-[1.75rem] bg-muted p-8 md:bg-transparent">
+              <h3 className="text-lg font-semibold">Bloom</h3>
               <p className="mt-1 text-sm text-muted-foreground">The full garden, end to end.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
                 $8,900
@@ -271,6 +265,7 @@ function Index() {
             >
               Book a free consultation <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
           </div>
         </div>
       </section>
