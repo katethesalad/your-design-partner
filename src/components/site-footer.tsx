@@ -1,5 +1,3 @@
-import { Link } from "@tanstack/react-router";
-
 export function SiteFooter() {
   return (
     <footer className="mx-auto max-w-6xl space-y-8 px-6 py-14 text-center">
@@ -22,12 +20,6 @@ export function SiteFooter() {
       </a>
 
       <div className="flex justify-center gap-6 pt-10">
-        <Link to="/art" className="font-mono text-xs text-muted-foreground hover:text-foreground">
-          Art
-        </Link>
-        <a href="#" className="font-mono text-xs text-muted-foreground hover:text-foreground">
-          Instagram
-        </a>
         <a href="#" className="font-mono text-xs text-muted-foreground hover:text-foreground">
           Behance
         </a>
