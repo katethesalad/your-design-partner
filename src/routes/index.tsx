@@ -27,6 +27,8 @@ export const Route = createFileRoute("/")({
 
 const phases = [
   {
+    shape: "shape-triangle",
+    color: "bg-[#e0ad34]",
     phase: "PHASE 1",
     title: "Discovery & Planning",
     duration: "1–2 weeks",
@@ -39,6 +41,8 @@ const phases = [
     ],
   },
   {
+    shape: "shape-pinched",
+    color: "bg-[#cbaed3]",
     phase: "PHASE 2",
     title: "Strategy & Concepts",
     duration: "1–2 weeks",
@@ -51,6 +55,8 @@ const phases = [
     ],
   },
   {
+    shape: "shape-starburst",
+    color: "bg-[#f58127]",
     phase: "PHASE 3",
     title: "Design & Craft",
     duration: "3–5 weeks",
@@ -63,6 +69,8 @@ const phases = [
     ],
   },
   {
+    shape: "shape-triangle",
+    color: "bg-[#e0ad34]",
     phase: "PHASE 4",
     title: "Refinement & Feedback",
     duration: "1–2 weeks",
@@ -75,6 +83,8 @@ const phases = [
     ],
   },
   {
+    shape: "shape-starburst",
+    color: "bg-[#f58127]",
     phase: "PHASE 5",
     title: "Delivery & Launch",
     duration: "1 week",
