@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="mx-auto max-w-6xl space-y-8 px-6 py-14 text-center">
       <div className="relative inline-block">
         <div className="absolute -right-10 -top-10 size-20 rounded-full bg-accent/20 blur-xl" />
-        <h2 className="font-display text-4xl italic leading-tight">
+        <h2 className="font-sans text-4xl italic leading-tight">
           Ready to make <br /> something <span className="text-primary">real</span>?
         </h2>
       </div>

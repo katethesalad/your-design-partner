@@ -83,7 +83,7 @@ function WorkPage() {
                 />
               </div>
               <div>
-                <h2 className="font-display text-2xl">{p.title}</h2>
+                <h2 className="font-sans text-2xl">{p.title}</h2>
                 <p className="text-sm text-muted-foreground">{p.meta}</p>
                 <p className="mt-3 text-pretty leading-relaxed">{p.body}</p>
               </div>

@@ -48,7 +48,7 @@ export function FeaturedWork() {
         <div className="rounded-[28px] bg-card p-5 ring-1 ring-foreground/5 md:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div>
-              <h2 className="font-display text-4xl leading-[1.05] tracking-tight md:text-5xl">
+              <h2 className="font-sans text-4xl leading-[1.05] tracking-tight md:text-5xl">
                 Get started with
                 <span className="ml-3 inline-grid size-7 place-items-center rounded-full bg-lilac align-middle">
                   <svg viewBox="0 0 24 24" className="size-3.5 text-lilac-foreground" fill="currentColor">
@@ -58,7 +58,7 @@ export function FeaturedWork() {
               </h2>
               <div className="mt-1 flex items-baseline gap-3">
                 <span className="font-mono text-sm text-muted-foreground">02</span>
-                <h2 className="font-display text-4xl leading-[1.05] tracking-tight md:text-5xl">
+                <h2 className="font-sans text-4xl leading-[1.05] tracking-tight md:text-5xl">
                   my featured projects
                 </h2>
               </div>
