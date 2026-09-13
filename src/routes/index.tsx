@@ -90,7 +90,7 @@ const phases = [
 
 function ProcessSection() {
   const [active, setActive] = useState(0);
-  const current = phases[active];
+  const current = phases[active]!;
 
   return (
     <section className="px-4 py-14 sm:px-6">
