@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { Check, Sparkles, Phone, ArrowRight } from "lucide-react";
 import { FeaturedWork } from "@/components/featured-work";
+import { cn } from "@/lib/utils";
 import heroArtwork from "@/assets/sophie-arlo-hero-art.png.asset.json";
 
 export const Route = createFileRoute("/")({
