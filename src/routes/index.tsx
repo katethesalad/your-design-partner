@@ -33,9 +33,9 @@ function Index() {
         <div className="blob-shape absolute -right-10 top-20 -z-10 size-48 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-sun opacity-60 blur-xl [animation-delay:2s]" />
 
         <div className="rise-in mx-auto w-full max-w-5xl">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium lowercase tracking-wide text-muted-foreground">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
             <span className="availability-dot size-1.5 rounded-full" />
-            available for new projects
+            AVAILABLE FOR NEW PROJECTS
           </span>
           <h1 className="sr-only">Kate creates tactile visual identities</h1>
           <div className="relative mx-auto mb-4">
