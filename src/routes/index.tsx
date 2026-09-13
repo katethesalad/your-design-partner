@@ -87,9 +87,9 @@ const phases = [
     ],
   },
   {
-    shape: "shape-starburst",
-    color: "bg-[#f58127]",
-    colorMuted: "bg-[#f58127]/40",
+    shape: "shape-pinched",
+    color: "bg-[#cbaed3]",
+    colorMuted: "bg-[#cbaed3]/40",
     phase: "PHASE 5",
     title: "Delivery & Launch",
     duration: "1 week",
