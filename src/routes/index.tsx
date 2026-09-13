@@ -29,6 +29,7 @@ const phases = [
   {
     shape: "shape-triangle",
     color: "bg-[#e0ad34]",
+    colorMuted: "bg-[#e0ad34]/40",
     phase: "PHASE 1",
     title: "Discovery & Planning",
     duration: "1–2 weeks",
@@ -43,6 +44,7 @@ const phases = [
   {
     shape: "shape-pinched",
     color: "bg-[#cbaed3]",
+    colorMuted: "bg-[#cbaed3]/40",
     phase: "PHASE 2",
     title: "Strategy & Concepts",
     duration: "1–2 weeks",
@@ -57,6 +59,7 @@ const phases = [
   {
     shape: "shape-starburst",
     color: "bg-[#f58127]",
+    colorMuted: "bg-[#f58127]/40",
     phase: "PHASE 3",
     title: "Design & Craft",
     duration: "3–5 weeks",
@@ -71,6 +74,7 @@ const phases = [
   {
     shape: "shape-triangle",
     color: "bg-[#e0ad34]",
+    colorMuted: "bg-[#e0ad34]/40",
     phase: "PHASE 4",
     title: "Refinement & Feedback",
     duration: "1–2 weeks",
@@ -85,6 +89,7 @@ const phases = [
   {
     shape: "shape-starburst",
     color: "bg-[#f58127]",
+    colorMuted: "bg-[#f58127]/40",
     phase: "PHASE 5",
     title: "Delivery & Launch",
     duration: "1 week",
