@@ -151,9 +151,6 @@ function ProcessSection() {
                   <span className="mt-1 block text-xs text-muted-foreground">
                     {p.duration}
                   </span>
-                  <span className="mt-3 block max-w-[200px] text-sm leading-relaxed text-muted-foreground">
-                    {p.desc}
-                  </span>
                 </button>
               );
             })}
