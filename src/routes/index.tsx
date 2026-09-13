@@ -132,14 +132,7 @@ function ProcessSection() {
               <path
                 d="M0 120 C 125 20, 125 220, 250 120 C 375 20, 375 220, 500 120 C 625 20, 625 220, 750 120 C 875 20, 875 220, 1000 120"
                 stroke="url(#processWave)"
-                strokeWidth="3"
-                strokeDasharray="8 12"
-                className="opacity-30"
-              />
-              <path
-                d="M0 120 C 125 20, 125 220, 250 120 C 375 20, 375 220, 500 120 C 625 20, 625 220, 750 120 C 875 20, 875 220, 1000 120"
-                stroke="url(#processWave)"
-                strokeWidth="1.5"
+                strokeWidth="2.5"
               />
             </svg>
 
