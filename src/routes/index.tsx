@@ -104,10 +104,10 @@ function ProcessSection() {
 
   return (
     <section className="px-4 py-14 sm:px-6">
-      <h2 className="mb-12 text-center font-sans text-4xl italic">The Sketchbook Method</h2>
+      <h2 className="mb-12 text-center font-sans text-4xl font-semibold tracking-tight sm:text-5xl">My Process</h2>
 
-      <div className="relative mx-auto max-w-6xl">
-        <div className="relative -mx-4 overflow-x-auto px-4 pb-8 pt-2 snap-x sm:-mx-6 sm:px-6">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-10">
+        <div className="relative overflow-x-auto px-2 pb-8 pt-2 snap-x sm:px-6">
           <div className="relative flex min-w-max items-start justify-between gap-6">
             <div className="absolute left-0 right-0 top-[4.25rem] h-px bg-foreground/10" />
 
@@ -132,14 +132,14 @@ function ProcessSection() {
 
                   <span
                     className={cn(
-                      "relative z-10 mt-4 grid size-10 place-items-center rounded-full border-2 transition-colors",
+                      "relative z-10 mt-4 grid size-12 place-items-center rounded-full bg-white ring-1 ring-foreground/10 transition-all",
                       isActive
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : "border-foreground/20 bg-background text-foreground group-hover:border-foreground/40"
+                        ? "scale-110 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.25)] ring-foreground/20"
+                        : "group-hover:scale-105"
                     )}
                     aria-hidden="true"
                   >
-                    <span className="size-2.5 rounded-full bg-current" />
+                    <span className={cn("size-5", p.shape, p.color)} />
                   </span>
 
                   <span className="mt-5 block text-sm font-semibold uppercase tracking-wide">
