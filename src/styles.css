@@ -192,6 +192,18 @@
   clip-path: polygon(50% 0, 59% 28%, 75% 7%, 76% 34%, 100% 25%, 82% 47%, 100% 63%, 72% 62%, 75% 100%, 53% 73%, 38% 100%, 37% 70%, 9% 79%, 28% 55%, 0 42%, 30% 36%, 18% 10%, 43% 29%);
 }
 
+@utility shape-triangle {
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+@utility shape-pinched {
+  clip-path: polygon(0 0, 50% 15%, 100% 0, 85% 50%, 100% 100%, 50% 85%, 0 100%, 15% 50%);
+}
+
+@utility shape-starburst {
+  clip-path: polygon(50% 0, 59% 28%, 75% 7%, 76% 34%, 100% 25%, 82% 47%, 100% 63%, 72% 62%, 75% 100%, 53% 73%, 38% 100%, 37% 70%, 9% 79%, 28% 55%, 0 42%, 30% 36%, 18% 10%, 43% 29%);
+}
+
 @utility hero-artwork {
   animation: artwork-breathe 6s ease-in-out infinite;
 }
