@@ -166,13 +166,15 @@ function ProcessSection() {
 
                   <span
                     className={cn(
-                      "relative z-10 mt-4 flex size-14 items-center justify-center rounded-full bg-background shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] ring-1 ring-foreground/5 transition-all",
-                      isActive ? "scale-110" : "opacity-90 group-hover:scale-105"
+                      "relative z-10 mt-4 size-12 transition-all",
+                      p.shape,
+                      p.color,
+                      isActive
+                        ? "scale-110 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.25)]"
+                        : "opacity-80 hover:scale-105"
                     )}
                     aria-hidden="true"
-                  >
-                    <span className={cn("size-8 transition-all", p.shape, p.color)} />
-                  </span>
+                  />
 
                   <span className="mt-5 block text-sm font-semibold uppercase tracking-wide">
                     {p.title}
