@@ -68,32 +68,7 @@ function Index() {
       <FeaturedWork />
 
 
-      <section className="px-6 py-14">
-        <h2 className="mb-12 text-center font-sans text-4xl italic">The Sketchbook Method</h2>
-        <div className="mx-auto grid max-w-4xl gap-4">
-          {[
-            ["01 // Discovery", "We sit down for coffee and dig into your brand's soul."],
-            ["02 // Sketching", "I move to paper first. Hundreds of messy, honest marks."],
-            ["03 // Refining", "The best ideas get polished into a digital reality."],
-          ].map(([step, text]) => (
-            <div
-              key={step}
-              className="space-y-4 rounded-3xl border border-background/10 bg-background/5 p-8"
-            >
-              <span className="font-mono text-xs text-primary">{step}</span>
-              <h3 className="text-xl">{text}</h3>
-            </div>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <Link
-            to="/process"
-            className="inline-flex rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground"
-          >
-            See the full process
-          </Link>
-        </div>
-      </section>
+      <ProcessSection />
 
       <section className="px-4 py-14 sm:px-6">
         <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-white px-6 py-14 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.15)] sm:px-12">
