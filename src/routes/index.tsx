@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, Sparkles, Phone, ArrowRight } from "lucide-react";
 import { FeaturedWork } from "@/components/featured-work";
-import workMeadow from "@/assets/work-meadow.jpg";
-import workCity from "@/assets/work-city.jpg";
 import heroArtwork from "@/assets/sophie-arlo-hero-art.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -67,60 +65,6 @@ function Index() {
 
       <FeaturedWork />
 
-      <section className="space-y-9 px-6 py-12">
-        <div className="mx-auto flex max-w-6xl items-end justify-between border-b border-foreground/10 pb-4">
-          <h2 className="font-sans text-3xl italic">Selected Work</h2>
-          <Link to="/work" className="font-mono text-xs text-muted-foreground hover:text-foreground">
-            (view all)
-          </Link>
-        </div>
-
-        <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
-          <Link to="/work" className="group space-y-4">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-sky ring-1 ring-foreground/5">
-              <img
-                src={workMeadow}
-                alt="Hand-drawn floral brand pattern in soft blues"
-                loading="lazy"
-                width={1080}
-                height={1350}
-                className="size-full object-cover"
-              />
-            </div>
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="text-xl font-medium">Meadow &amp; Grain</h3>
-                <p className="text-sm text-muted-foreground">Identity, Illustration, 2024</p>
-              </div>
-              <div className="grid size-10 place-items-center rounded-full border border-foreground/10 transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground">
-                &rarr;
-              </div>
-            </div>
-          </Link>
-
-          <Link to="/work" className="group space-y-4">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-petal ring-1 ring-foreground/5">
-              <img
-                src={workCity}
-                alt="Risograph zine cover with bold typographic shapes"
-                loading="lazy"
-                width={1080}
-                height={1350}
-                className="size-full object-cover"
-              />
-            </div>
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="text-xl font-medium">City Rhythms</h3>
-                <p className="text-sm text-muted-foreground">Editorial Design, 2023</p>
-              </div>
-              <div className="grid size-10 place-items-center rounded-full border border-foreground/10 transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground">
-                &rarr;
-              </div>
-            </div>
-          </Link>
-        </div>
-      </section>
 
       <section className="rounded-t-[3rem] bg-forest px-6 py-14 text-forest-foreground">
         <h2 className="mb-12 text-center font-sans text-4xl italic">The Sketchbook Method</h2>
