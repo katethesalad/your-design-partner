@@ -49,19 +49,8 @@ export function FeaturedWork() {
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div>
               <h2 className="font-sans text-4xl leading-[1.05] tracking-tight md:text-5xl">
-                Get started with
-                <span className="ml-3 inline-grid size-7 place-items-center rounded-full bg-lilac align-middle">
-                  <svg viewBox="0 0 24 24" className="size-3.5 text-lilac-foreground" fill="currentColor">
-                    <path d="M4 5h16v10H9l-5 4z" />
-                  </svg>
-                </span>
+                my featured projects
               </h2>
-              <div className="mt-1 flex items-baseline gap-3">
-                <span className="font-mono text-sm text-muted-foreground">02</span>
-                <h2 className="font-sans text-4xl leading-[1.05] tracking-tight md:text-5xl">
-                  my featured projects
-                </h2>
-              </div>
             </div>
 
             <p className="max-w-sm text-sm leading-relaxed md:pt-2">
@@ -110,16 +99,6 @@ export function FeaturedWork() {
               >
                 <path d="M300 30C240 30 180 20 150 70s40 90 90 70-10 120-90 100-120-30-160-10" />
               </svg>
-
-              <div className="relative flex w-fit items-center gap-3 rounded-full bg-card py-1.5 pl-1.5 pr-5">
-                <span className="grid size-9 place-items-center rounded-full bg-accent font-display text-sm text-accent-foreground">
-                  K
-                </span>
-                <span className="leading-tight">
-                  <span className="block text-[11px] text-muted-foreground">Designer</span>
-                  <span className="block text-sm font-medium">Kate</span>
-                </span>
-              </div>
 
               <h3 className="relative mt-24 font-display text-2xl text-card">City Rhythms</h3>
               <p className="relative mt-3 text-sm leading-relaxed text-card/85">
