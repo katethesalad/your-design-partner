@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import tradeIslands from "@/assets/trade-islands.png.asset.json";
+import sonaraBudha from "@/assets/sonara-budha.png.asset.json";
 
 function ArrowBadge() {
   return (
@@ -60,26 +61,23 @@ export function FeaturedWork() {
               </div>
             </article>
 
-            {/* Card 2 — colour feature */}
-            <article className="relative flex flex-col overflow-hidden rounded-[24px] bg-background p-4">
-              <svg
-                viewBox="0 0 300 300"
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-6 top-8 h-64 w-64 text-primary"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="22"
-                strokeLinecap="round"
-              >
-                <path d="M300 30C240 30 180 20 150 70s40 90 90 70-10 120-90 100-120-30-160-10" />
-              </svg>
-
-              <h3 className="relative mt-24 font-display text-2xl">City Rhythms</h3>
-              <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
-                A risograph zine series printed in two inks — chosen as an AIGA "Best of Print" pick
-                in 2024.
+            {/* Card 2 */}
+            <article className="flex flex-col rounded-[24px] bg-background p-4">
+              <img
+                src={sonaraBudha.url}
+                alt="Sonara Budha jewellers rebranding"
+                loading="lazy"
+                width={1200}
+                height={900}
+                className="aspect-[4/3] w-full rounded-[18px] object-cover"
+              />
+              <h3 className="mt-5 font-display text-xl">Sonara Budha</h3>
+              <p className="mt-3 text-sm leading-relaxed">
+                A complete rebrand for a Kenyan jewelry store,{" "}
+                <span className="text-muted-foreground">from logo and illustration</span> to
+                elegant packaging and brand identity.
               </p>
-              <div className="relative mt-auto flex items-center justify-between pt-8">
+              <div className="mt-auto flex items-center justify-between pt-6">
                 <Link to="/work" className="text-sm font-medium">
                   Read More
                 </Link>
