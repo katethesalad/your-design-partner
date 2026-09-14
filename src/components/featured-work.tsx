@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import tradeIslands from "@/assets/trade-islands.png.asset.json";
+import sonaraBudha from "@/assets/sonara-budha.png.asset.json";
 
 function ArrowBadge() {
   return (
