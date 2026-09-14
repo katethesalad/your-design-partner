@@ -1,6 +1,15 @@
+import pigeonAsset from "@/assets/pigeon.png.asset.json";
+
 export function SiteFooter() {
   return (
     <footer className="mx-auto max-w-6xl space-y-8 px-6 py-14 text-center">
+      <img
+        src={pigeonAsset.url}
+        alt="Pigeon mascot"
+        width={880}
+        height={905}
+        className="mx-auto h-40 w-auto drop-shadow-sm"
+      />
       <div className="relative inline-block">
         <div className="absolute -right-10 -top-10 size-20 rounded-full bg-accent/20 blur-xl" />
         <h2 className="font-sans text-4xl italic leading-tight">
