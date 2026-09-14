@@ -108,7 +108,7 @@ function ProcessSection() {
   const current = phases[active]!;
 
   return (
-    <section className="px-4 py-14 sm:px-6">
+    <section className="px-4 pt-14 pb-10 sm:px-6">
       <div className="text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
           02 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> PROCESS
