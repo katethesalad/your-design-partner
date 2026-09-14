@@ -22,8 +22,8 @@ export function FeaturedWork() {
               <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
                 01 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> FEATURED PROJECTS
               </span>
-              <h2 className="font-sans text-4xl leading-[1.05] tracking-tight md:text-5xl">
-                my featured projects
+              <h2 className="mt-6 font-sans text-4xl font-semibold tracking-tight md:text-5xl">
+                My Featured Projects
               </h2>
             </div>
 
