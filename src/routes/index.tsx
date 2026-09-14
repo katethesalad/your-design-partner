@@ -4,6 +4,7 @@ import { Check, Sparkles, Phone, ArrowRight } from "lucide-react";
 import { FeaturedWork } from "@/components/featured-work";
 import { cn } from "@/lib/utils";
 import heroArtwork from "@/assets/sophie-arlo-hero-art.png.asset.json";
+import pigeonAsset from "@/assets/pigeon.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -337,6 +338,13 @@ function Index() {
 
           {/* Consultation banner */}
           <div className="mt-8 flex flex-col items-center rounded-[1.75rem] bg-[radial-gradient(at_0%_0%,#e0ad34_0px,transparent_50%),radial-gradient(at_100%_0%,#cbaed3_0px,transparent_55%),radial-gradient(at_100%_100%,#f58127_0px,transparent_50%),radial-gradient(at_0%_100%,#e0ad34_0px,transparent_55%)] px-8 py-10 text-center">
+            <img
+              src={pigeonAsset.url}
+              alt="Pigeon mascot"
+              width={880}
+              height={905}
+              className="h-28 w-auto drop-shadow-sm"
+            />
             <div className="flex items-center justify-center">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
                 <Phone className="h-4 w-4" />
