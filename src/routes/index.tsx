@@ -309,12 +309,6 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <Link
-                to="/pricing"
-                className="mt-auto block w-full rounded-full bg-foreground py-3.5 text-center text-sm font-medium text-background transition-colors hover:bg-foreground/85"
-              >
-                Get the Story package
-              </Link>
             </div>
 
             {/* Bloom */}
