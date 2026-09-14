@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import workEditorial from "@/assets/work-editorial.jpg";
+import tradeIslands from "@/assets/trade-islands.png.asset.json";
 
 function ArrowBadge() {
   return (
@@ -39,18 +39,18 @@ export function FeaturedWork() {
             {/* Card 1 */}
             <article className="flex flex-col rounded-[24px] bg-secondary p-4">
               <img
-                src={workEditorial}
-                alt="Editorial spread with organic illustrated shapes"
+                src={tradeIslands.url}
+                alt="Trade Islands lemon iced tea can rebranding"
                 loading="lazy"
                 width={1200}
                 height={900}
                 className="aspect-[4/3] w-full rounded-[18px] object-cover"
               />
-              <h3 className="mt-5 font-display text-xl">Meadow &amp; Grain</h3>
+              <h3 className="mt-5 font-display text-xl">Trade Islands Iced Tea</h3>
               <p className="mt-3 text-sm leading-relaxed">
-                A full identity for a slow-living florist,{" "}
-                <span className="text-muted-foreground">built from hand-drawn botanical marks</span> and
-                a warm paper palette.
+                A full rebranding for a lemon iced tea,{" "}
+                <span className="text-muted-foreground">from logo and packaging</span> to a bold
+                lilac-and-gold visual identity.
               </p>
               <div className="mt-auto flex items-center justify-between pt-6">
                 <Link to="/work" className="text-sm font-medium">
