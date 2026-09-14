@@ -4,6 +4,7 @@ import { Check, Sparkles, Phone, ArrowRight } from "lucide-react";
 import { FeaturedWork } from "@/components/featured-work";
 import { cn } from "@/lib/utils";
 import heroArtwork from "@/assets/sophie-arlo-hero-art.png.asset.json";
+import pigeonAsset from "@/assets/pigeon.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
