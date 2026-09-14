@@ -45,7 +45,7 @@ export function FeaturedWork() {
                 loading="lazy"
                 width={1200}
                 height={900}
-                className="aspect-[4/3] w-full rounded-[18px] object-cover"
+                className="aspect-[4/3] w-full rounded-[18px] bg-muted/30 object-contain"
               />
               <h3 className="mt-5 font-display text-xl">Trade Islands Iced Tea</h3>
               <p className="mt-3 text-sm leading-relaxed">
@@ -69,7 +69,7 @@ export function FeaturedWork() {
                 loading="lazy"
                 width={1200}
                 height={900}
-                className="aspect-[4/3] w-full rounded-[18px] object-cover"
+                className="aspect-[4/3] w-full rounded-[18px] bg-muted/30 object-contain"
               />
               <h3 className="mt-5 font-display text-xl">Sonara Budha</h3>
               <p className="mt-3 text-sm leading-relaxed">
