@@ -338,10 +338,7 @@ function Index() {
 
           {/* Consultation banner */}
           <div className="mt-8 flex flex-col items-center rounded-[1.75rem] bg-[linear-gradient(120deg,#f9eec4,#f5d5ef_35%,#d9e4fb_70%,#fdf3d8)] px-8 py-10 text-center">
-            <div className="flex items-center gap-2">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/80 font-display text-lg italic">
-                K.
-              </span>
+            <div className="flex items-center justify-center">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
                 <Phone className="h-4 w-4" />
               </span>
