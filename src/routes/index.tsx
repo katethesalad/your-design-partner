@@ -256,7 +256,7 @@ function Index() {
       <ProcessSection />
 
       <section className="px-4 py-14 sm:px-6">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-white px-6 py-14 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.15)] sm:px-12">
+        <div className="mx-auto max-w-6xl rounded-[2.5rem] bg-white px-6 py-14 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.15)] sm:px-12">
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
               004 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> INVESTMENT
