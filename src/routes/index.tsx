@@ -111,7 +111,7 @@ function ProcessSection() {
     <section className="px-4 py-14 sm:px-6">
       <h2 className="mb-12 text-center font-sans text-4xl font-semibold tracking-tight sm:text-5xl">My Process</h2>
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-10">
+      <div className="relative mx-auto max-w-6xl">
         <div className="relative overflow-x-auto px-2 pb-8 pt-2 snap-x sm:px-6">
           <div className="relative flex min-w-max items-start justify-between gap-6 py-16">
             <svg
@@ -256,7 +256,7 @@ function Index() {
       <ProcessSection />
 
       <section className="px-4 py-14 sm:px-6">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-white px-6 py-14 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.15)] sm:px-12">
+        <div className="mx-auto max-w-6xl rounded-[2.5rem] bg-white px-6 py-14 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.15)] sm:px-12">
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
               004 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> INVESTMENT
