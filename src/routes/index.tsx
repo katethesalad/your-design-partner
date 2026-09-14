@@ -294,10 +294,7 @@ function Index() {
               <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1 text-[10px] font-medium">
                 <Sparkles className="h-3 w-3" /> Most Popular
               </span>
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-petal">
-                <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-              </div>
-              <h3 className="mt-6 text-lg font-semibold">Story</h3>
+              <h3 className="text-lg font-semibold">Story</h3>
               <p className="mt-1 text-sm text-muted-foreground">Deep identity and collateral.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
                 $4,800
