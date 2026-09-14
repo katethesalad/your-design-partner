@@ -271,7 +271,7 @@ function Index() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {/* Spark */}
-            <div className="flex flex-col rounded-[1.75rem] bg-muted p-8">
+            <div className="flex flex-col rounded-[1.75rem] bg-background p-8">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground/10">
                 <span className="h-2.5 w-2.5 rounded-full bg-foreground/60" />
               </div>
