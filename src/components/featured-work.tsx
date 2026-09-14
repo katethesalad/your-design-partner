@@ -61,7 +61,7 @@ export function FeaturedWork() {
             </article>
 
             {/* Card 2 — colour feature */}
-            <article className="relative flex flex-col overflow-hidden rounded-[24px] bg-lilac p-4 text-lilac-foreground">
+            <article className="relative flex flex-col overflow-hidden rounded-[24px] bg-background p-4">
               <svg
                 viewBox="0 0 300 300"
                 aria-hidden="true"
@@ -74,13 +74,13 @@ export function FeaturedWork() {
                 <path d="M300 30C240 30 180 20 150 70s40 90 90 70-10 120-90 100-120-30-160-10" />
               </svg>
 
-              <h3 className="relative mt-24 font-display text-2xl text-card">City Rhythms</h3>
-              <p className="relative mt-3 text-sm leading-relaxed text-card/85">
+              <h3 className="relative mt-24 font-display text-2xl">City Rhythms</h3>
+              <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
                 A risograph zine series printed in two inks — chosen as an AIGA "Best of Print" pick
                 in 2024.
               </p>
               <div className="relative mt-auto flex items-center justify-between pt-8">
-                <Link to="/work" className="text-sm font-medium text-card">
+                <Link to="/work" className="text-sm font-medium">
                   Read More
                 </Link>
                 <ArrowBadge />
