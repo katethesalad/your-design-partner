@@ -276,7 +276,7 @@ function Index() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {/* Spark */}
-            <div className="flex flex-col rounded-[1.75rem] bg-background p-8">
+            <div className="flex flex-col rounded-[1.75rem] bg-white p-8">
               <h3 className="text-lg font-semibold">Spark</h3>
               <p className="mt-1 text-sm text-muted-foreground">For startups and small ventures.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
@@ -317,7 +317,7 @@ function Index() {
             </div>
 
             {/* Bloom */}
-            <div className="flex flex-col rounded-[1.75rem] bg-background p-8">
+            <div className="flex flex-col rounded-[1.75rem] bg-white p-8">
               <h3 className="text-lg font-semibold">Bloom</h3>
               <p className="mt-1 text-sm text-muted-foreground">The full garden, end to end.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
