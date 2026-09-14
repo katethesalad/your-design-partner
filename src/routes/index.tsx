@@ -111,7 +111,7 @@ function ProcessSection() {
     <section className="px-4 py-14 sm:px-6">
       <h2 className="mb-12 text-center font-sans text-4xl font-semibold tracking-tight sm:text-5xl">My Process</h2>
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-10">
+      <div className="relative mx-auto max-w-6xl">
         <div className="relative overflow-x-auto px-2 pb-8 pt-2 snap-x sm:px-6">
           <div className="relative flex min-w-max items-start justify-between gap-6 py-16">
             <svg
