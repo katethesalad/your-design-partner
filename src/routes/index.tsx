@@ -109,7 +109,12 @@ function ProcessSection() {
 
   return (
     <section className="px-4 py-14 sm:px-6">
-      <h2 className="mb-12 text-center font-sans text-4xl font-semibold tracking-tight sm:text-5xl">My Process</h2>
+      <div className="text-center">
+        <span className="inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
+          02 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> PROCESS
+        </span>
+      </div>
+      <h2 className="mb-12 mt-6 text-center font-sans text-4xl font-semibold tracking-tight sm:text-5xl">My Process</h2>
 
       <div className="relative mx-auto max-w-6xl">
         <div className="relative overflow-x-auto px-2 pb-8 pt-2 snap-x sm:px-6">

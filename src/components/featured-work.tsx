@@ -19,6 +19,9 @@ export function FeaturedWork() {
         <div className="rounded-[28px] bg-card p-5 ring-1 ring-foreground/5 md:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div>
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
+                01 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> FEATURED PROJECTS
+              </span>
               <h2 className="font-sans text-4xl leading-[1.05] tracking-tight md:text-5xl">
                 my featured projects
               </h2>
