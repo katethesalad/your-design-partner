@@ -37,7 +37,7 @@ export function FeaturedWork() {
           {/* Three cards */}
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {/* Card 1 */}
-            <article className="flex flex-col rounded-[24px] bg-secondary p-4">
+            <article className="flex flex-col rounded-[24px] bg-background p-4">
               <img
                 src={tradeIslands.url}
                 alt="Trade Islands lemon iced tea can rebranding"
