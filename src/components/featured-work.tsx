@@ -3,7 +3,7 @@ import tradeIslands from "@/assets/trade-islands.png.asset.json";
 
 function ArrowBadge() {
   return (
-    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-background text-primary ring-1 ring-foreground/10">
+    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-card text-primary ring-1 ring-foreground/10">
       <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M7 17 17 7M9 7h8v8" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
