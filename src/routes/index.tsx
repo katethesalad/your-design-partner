@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Check } from "lucide-react";
+import { Check, Sparkles, Phone, ArrowRight } from "lucide-react";
 import { FeaturedWork } from "@/components/featured-work";
 import { cn } from "@/lib/utils";
 import heroArtwork from "@/assets/sophie-arlo-hero-art.png.asset.json";
@@ -260,6 +260,105 @@ function Index() {
 
       <ProcessSection />
 
+      <section className="px-4 py-14 sm:px-6">
+        <div className="mx-auto max-w-6xl rounded-[2.5rem] bg-white px-6 py-14 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.15)] sm:px-12">
+          <div className="text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
+              03 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> INVESTMENT
+            </span>
+            <h2 className="mt-6 font-sans text-4xl font-semibold tracking-tight sm:text-5xl">
+              Design for Every Stage
+            </h2>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Whether you're starting small or scaling fast, there's a package that fits.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {/* Spark */}
+            <div className="flex flex-col rounded-[1.75rem] bg-background p-8">
+              <h3 className="text-lg font-semibold">Spark</h3>
+              <p className="mt-1 text-sm text-muted-foreground">For startups and small ventures.</p>
+              <div className="mt-5 text-4xl font-semibold tracking-tight">
+                $2,400
+                <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
+              </div>
+              <hr className="my-6 border-foreground/10" />
+              <p className="text-xs font-medium text-muted-foreground">What's included:</p>
+              <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
+                {["Core Identity Pack", "Colour & Type Guide", "Primary Wordmark"].map((f) => (
+                  <li key={f} className="flex items-center gap-2.5">
+                    <Check className="h-3.5 w-3.5 shrink-0 text-foreground" /> {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Story — most popular */}
+            <div className="relative flex flex-col rounded-[1.75rem] border border-foreground/10 bg-white p-8 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.18)]">
+              <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1 text-[10px] font-medium">
+                <Sparkles className="h-3 w-3" /> Most Popular
+              </span>
+              <h3 className="text-lg font-semibold">Story</h3>
+              <p className="mt-1 text-sm text-muted-foreground">Deep identity and collateral.</p>
+              <div className="mt-5 text-4xl font-semibold tracking-tight">
+                $4,800
+                <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
+              </div>
+              <hr className="my-6 border-foreground/10" />
+              <p className="text-xs font-medium text-muted-foreground">Everything in Spark, plus:</p>
+              <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
+                {["Full Brand Suite", "Custom Illustration Set", "Social Media Kit"].map((f) => (
+                  <li key={f} className="flex items-center gap-2.5">
+                    <Check className="h-3.5 w-3.5 shrink-0 text-foreground" /> {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Bloom */}
+            <div className="flex flex-col rounded-[1.75rem] bg-background p-8">
+              <h3 className="text-lg font-semibold">Bloom</h3>
+              <p className="mt-1 text-sm text-muted-foreground">The full garden, end to end.</p>
+              <div className="mt-5 text-4xl font-semibold tracking-tight">
+                $8,900
+                <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
+              </div>
+              <hr className="my-6 border-foreground/10" />
+              <p className="text-xs font-medium text-muted-foreground">Everything in Story, plus:</p>
+              <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
+                {["Packaging & Print Design", "Art Direction Support", "3 Months of Design Care"].map((f) => (
+                  <li key={f} className="flex items-center gap-2.5">
+                    <Check className="h-3.5 w-3.5 shrink-0 text-foreground" /> {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Consultation banner */}
+          <div className="mt-8 flex flex-col items-center rounded-[1.75rem] bg-[linear-gradient(120deg,#f9eec4,#f5d5ef_35%,#d9e4fb_70%,#fdf3d8)] px-8 py-10 text-center">
+            <div className="flex items-center gap-2">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/80 font-display text-lg italic">
+                K.
+              </span>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
+                <Phone className="h-4 w-4" />
+              </span>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">Not sure which package is right for you?</h3>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Book a free 30-minute intro call and we'll figure it out together.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-foreground/85"
+            >
+              Book a free consultation <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
