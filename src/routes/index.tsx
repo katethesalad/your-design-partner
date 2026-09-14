@@ -260,8 +260,7 @@ function Index() {
 
       <ProcessSection />
 
-      <section className="px-4 py-14 sm:px-6">
-        <div className="mx-auto max-w-6xl px-6 py-14 sm:px-12">
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
               03 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> INVESTMENT
@@ -354,7 +353,6 @@ function Index() {
               Book a free consultation <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-        </div>
       </section>
     </main>
   );
