@@ -272,10 +272,7 @@ function Index() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {/* Spark */}
             <div className="flex flex-col rounded-[1.75rem] bg-background p-8">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground/10">
-                <span className="h-2.5 w-2.5 rounded-full bg-foreground/60" />
-              </div>
-              <h3 className="mt-6 text-lg font-semibold">Spark</h3>
+              <h3 className="text-lg font-semibold">Spark</h3>
               <p className="mt-1 text-sm text-muted-foreground">For startups and small ventures.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
                 $2,400
@@ -290,12 +287,6 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <Link
-                to="/pricing"
-                className="mt-auto block w-full rounded-full bg-foreground py-3.5 text-center text-sm font-medium text-background transition-colors hover:bg-foreground/85"
-              >
-                Start here
-              </Link>
             </div>
 
             {/* Story — most popular */}
@@ -303,10 +294,7 @@ function Index() {
               <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1 text-[10px] font-medium">
                 <Sparkles className="h-3 w-3" /> Most Popular
               </span>
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-petal">
-                <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-              </div>
-              <h3 className="mt-6 text-lg font-semibold">Story</h3>
+              <h3 className="text-lg font-semibold">Story</h3>
               <p className="mt-1 text-sm text-muted-foreground">Deep identity and collateral.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
                 $4,800
@@ -321,20 +309,11 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <Link
-                to="/pricing"
-                className="mt-auto block w-full rounded-full bg-foreground py-3.5 text-center text-sm font-medium text-background transition-colors hover:bg-foreground/85"
-              >
-                Get the Story package
-              </Link>
             </div>
 
             {/* Bloom */}
             <div className="flex flex-col rounded-[1.75rem] bg-background p-8">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground/10">
-                <span className="h-2.5 w-2.5 rounded-full bg-foreground/60" />
-              </div>
-              <h3 className="mt-6 text-lg font-semibold">Bloom</h3>
+              <h3 className="text-lg font-semibold">Bloom</h3>
               <p className="mt-1 text-sm text-muted-foreground">The full garden, end to end.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
                 $8,900
@@ -349,12 +328,6 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <Link
-                to="/pricing"
-                className="mt-auto block w-full rounded-full bg-foreground py-3.5 text-center text-sm font-medium text-background transition-colors hover:bg-foreground/85"
-              >
-                Get the Bloom package
-              </Link>
             </div>
           </div>
 
