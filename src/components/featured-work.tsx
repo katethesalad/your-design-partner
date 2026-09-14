@@ -89,7 +89,7 @@ export function FeaturedWork() {
 
             {/* Column 3 — two stacked cards */}
             <div className="flex flex-col gap-4">
-              <article className="rounded-[24px] bg-secondary p-6">
+              <article className="rounded-[24px] bg-background p-6">
                 <h3 className="font-display text-xl leading-tight">
                   Kindred Coffee <br /> Packaging
                 </h3>
@@ -106,7 +106,7 @@ export function FeaturedWork() {
                 </div>
               </article>
 
-              <article className="flex flex-col justify-between rounded-[24px] bg-secondary p-6">
+              <article className="flex flex-col justify-between rounded-[24px] bg-background p-6">
                 <div className="flex items-center justify-between">
                   <span className="grid size-10 place-items-center rounded-full bg-primary text-primary-foreground">
                     <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.8">
