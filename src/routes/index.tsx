@@ -337,7 +337,7 @@ function Index() {
           </div>
 
           {/* Consultation banner */}
-          <div className="mt-8 flex flex-col items-center rounded-[1.75rem] bg-[linear-gradient(120deg,#e0ad34,#cbaed3_35%,#f58127_70%,#e0ad34)] px-8 py-10 text-center">
+          <div className="mt-8 flex flex-col items-center rounded-[1.75rem] bg-[radial-gradient(at_0%_0%,#e0ad34_0px,transparent_50%),radial-gradient(at_100%_0%,#cbaed3_0px,transparent_55%),radial-gradient(at_100%_100%,#f58127_0px,transparent_50%),radial-gradient(at_0%_100%,#e0ad34_0px,transparent_55%)] px-8 py-10 text-center">
             <div className="flex items-center justify-center">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
                 <Phone className="h-4 w-4" />
