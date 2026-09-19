@@ -79,25 +79,34 @@ function WorkPage() {
         </p>
 
         <div className="mt-16 grid gap-12 md:grid-cols-2">
-          {projects.map((p) => (
-            <article key={p.title} className="group space-y-4">
-              <div
-                className={`relative aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 ${p.tint}`}
-              >
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  loading="lazy"
-                  className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                />
-              </div>
-              <div>
-                <h2 className="font-sans text-2xl">{p.title}</h2>
-                <p className="text-sm text-muted-foreground">{p.meta}</p>
-                <p className="mt-3 text-pretty leading-relaxed">{p.body}</p>
-              </div>
-            </article>
-          ))}
+          {projects.map((p) => {
+            const card = (
+              <article className="group space-y-4">
+                <div
+                  className={`relative aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 ${p.tint}`}
+                >
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div>
+                  <h2 className="font-sans text-2xl">{p.title}</h2>
+                  <p className="text-sm text-muted-foreground">{p.meta}</p>
+                  <p className="mt-3 text-pretty leading-relaxed">{p.body}</p>
+                </div>
+              </article>
+            );
+            return p.to ? (
+              <Link key={p.title} to={p.to} className="block">
+                {card}
+              </Link>
+            ) : (
+              card
+            );
+          })}
         </div>
       </div>
     </main>
