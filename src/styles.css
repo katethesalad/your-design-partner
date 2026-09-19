@@ -208,10 +208,33 @@
   animation: artwork-breathe 6s ease-in-out infinite;
 }
 
-/* Footer confetti: smaller than the hero pieces (scale property, so the
-   drift transform animation is unaffected) */
+/* Footer confetti: smaller than the hero pieces on desktop (scale property,
+   so the drift transform animation is unaffected) */
 .confetti-sm {
   scale: 0.6;
+}
+
+/* Footer confetti stays bigger on mobile than the hero pieces */
+@media (max-width: 767px) {
+  footer .confetti-sm {
+    scale: 1;
+  }
+
+  footer .confetti-triangle {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  footer .confetti-pill {
+    width: 0.5rem;
+    height: 1.1rem;
+  }
+
+  footer .confetti-pinched,
+  footer .confetti-starburst {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
 }
 
 @media (min-width: 768px) {
