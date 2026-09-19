@@ -1,4 +1,4 @@
-import pigeonAsset from "@/assets/pigeon.png.asset.json";
+import pigeon from "@/assets/pigeon.png";
 
 export function SiteFooter() {
   return (
@@ -13,7 +13,7 @@ export function SiteFooter() {
         <span className="confetti confetti-sm confetti-starburst right-[-6%] top-[58%] bg-logo-pink [animation-delay:-4.8s]" />
         <span className="confetti confetti-sm confetti-pinched right-[-20%] top-[88%] bg-logo-yellow [animation-delay:-1.7s]" />
         <img
-          src={pigeonAsset.url}
+          src={pigeon}
           alt="Pigeon mascot"
           width={880}
           height={905}
