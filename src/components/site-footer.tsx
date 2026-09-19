@@ -3,7 +3,7 @@ import pigeonAsset from "@/assets/pigeon.png.asset.json";
 export function SiteFooter() {
   return (
     <footer className="mx-auto max-w-6xl space-y-8 px-6 py-14 text-center">
-      <div className="relative inline-block">
+      <div className="relative mx-auto w-fit">
         <span className="confetti confetti-triangle left-[2%] top-[18%] bg-logo-orange [animation-delay:-1.2s]" />
         <span className="confetti confetti-pill left-[12%] top-[64%] bg-logo-yellow [animation-delay:-3.4s]" />
         <span className="confetti confetti-pinched left-[7%] top-[90%] bg-logo-pink [animation-delay:-2.2s]" />
@@ -20,7 +20,7 @@ export function SiteFooter() {
           className="mx-auto h-40 w-auto drop-shadow-sm"
         />
       </div>
-      <div className="relative inline-block">
+      <div className="relative mx-auto w-fit">
         <div className="absolute -right-10 -top-10 size-20 rounded-full bg-accent/20 blur-xl" />
         <h2 className="font-sans text-4xl italic leading-tight">
           Ready to make <br /> something <span className="text-primary">real</span>?
