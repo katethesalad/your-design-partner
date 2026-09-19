@@ -1,8 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import workMeadow from "@/assets/work-meadow.jpg";
 import workCity from "@/assets/work-city.jpg";
 import workKindred from "@/assets/work-kindred.jpg";
 import workEditorial from "@/assets/work-editorial.jpg";
+import tradeIslands from "@/assets/trade-islands.png.asset.json";
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
