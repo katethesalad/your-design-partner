@@ -1,8 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import workMeadow from "@/assets/work-meadow.jpg";
 import workCity from "@/assets/work-city.jpg";
 import workKindred from "@/assets/work-kindred.jpg";
 import workEditorial from "@/assets/work-editorial.jpg";
+import tradeIslands from "@/assets/trade-islands.png.asset.json";
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
@@ -25,6 +26,14 @@ export const Route = createFileRoute("/work/")({
 });
 
 const projects = [
+  {
+    title: "Trade Islands Iced Tea",
+    meta: "Branding, UI/UX, Packaging",
+    body: "A full rebranding for a lemon iced tea, from logo and packaging to a bold lilac-and-gold visual identity.",
+    image: tradeIslands.url,
+    tint: "bg-sand",
+    to: "/work/trade-islands-iced-tea",
+  },
   {
     title: "Meadow & Grain",
     meta: "Identity, Illustration — 2024",
@@ -70,25 +79,34 @@ function WorkPage() {
         </p>
 
         <div className="mt-16 grid gap-12 md:grid-cols-2">
-          {projects.map((p) => (
-            <article key={p.title} className="group space-y-4">
-              <div
-                className={`relative aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 ${p.tint}`}
-              >
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  loading="lazy"
-                  className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                />
-              </div>
-              <div>
-                <h2 className="font-sans text-2xl">{p.title}</h2>
-                <p className="text-sm text-muted-foreground">{p.meta}</p>
-                <p className="mt-3 text-pretty leading-relaxed">{p.body}</p>
-              </div>
-            </article>
-          ))}
+          {projects.map((p) => {
+            const card = (
+              <article className="group space-y-4">
+                <div
+                  className={`relative aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 ${p.tint}`}
+                >
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div>
+                  <h2 className="font-sans text-2xl">{p.title}</h2>
+                  <p className="text-sm text-muted-foreground">{p.meta}</p>
+                  <p className="mt-3 text-pretty leading-relaxed">{p.body}</p>
+                </div>
+              </article>
+            );
+            return p.to ? (
+              <Link key={p.title} to={p.to} className="block">
+                {card}
+              </Link>
+            ) : (
+              card
+            );
+          })}
         </div>
       </div>
     </main>
