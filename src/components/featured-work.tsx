@@ -40,7 +40,10 @@ export function FeaturedWork() {
           {/* Three cards */}
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {/* Card 1 */}
-            <article className="flex flex-col rounded-[24px] bg-background p-4">
+            <Link
+              to="/work/trade-islands-iced-tea"
+              className="group flex flex-col rounded-[24px] bg-background p-4 transition-shadow hover:shadow-md"
+            >
               <img
                 src={tradeIslands.url}
                 alt="Trade Islands lemon iced tea can rebranding"
@@ -56,12 +59,12 @@ export function FeaturedWork() {
                 lilac-and-gold visual identity.
               </p>
               <div className="mt-auto flex items-center justify-between pt-6">
-                <Link to="/work" className="text-sm font-medium">
-                  Read More
-                </Link>
-                <ArrowBadge />
+                <span className="text-sm font-medium">Read More</span>
+                <span className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                  <ArrowBadge />
+                </span>
               </div>
-            </article>
+            </Link>
 
             {/* Card 2 */}
             <article className="flex flex-col rounded-[24px] bg-background p-4">
