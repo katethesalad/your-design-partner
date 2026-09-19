@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as WorkTradeIslandsIcedTeaRouteImport } from './routes/work.trade-islands-iced-tea'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const WorkRoute = WorkRouteImport.update({
   path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkTradeIslandsIcedTeaRoute = WorkTradeIslandsIcedTeaRouteImport.update({
+  id: '/trade-islands-iced-tea',
+  path: '/trade-islands-iced-tea',
+  getParentRoute: () => WorkRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -53,7 +59,8 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
-  '/work': typeof WorkRoute
+  '/work': typeof WorkRouteWithChildren
+  '/work/trade-islands-iced-tea': typeof WorkTradeIslandsIcedTeaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +68,8 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
-  '/work': typeof WorkRoute
+  '/work': typeof WorkRouteWithChildren
+  '/work/trade-islands-iced-tea': typeof WorkTradeIslandsIcedTeaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,14 +78,37 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
-  '/work': typeof WorkRoute
+  '/work': typeof WorkRouteWithChildren
+  '/work/trade-islands-iced-tea': typeof WorkTradeIslandsIcedTeaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/art' | '/contact' | '/pricing' | '/process' | '/work'
+  fullPaths:
+    | '/'
+    | '/art'
+    | '/contact'
+    | '/pricing'
+    | '/process'
+    | '/work'
+    | '/work/trade-islands-iced-tea'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/art' | '/contact' | '/pricing' | '/process' | '/work'
-  id: '__root__' | '/' | '/art' | '/contact' | '/pricing' | '/process' | '/work'
+  to:
+    | '/'
+    | '/art'
+    | '/contact'
+    | '/pricing'
+    | '/process'
+    | '/work'
+    | '/work/trade-islands-iced-tea'
+  id:
+    | '__root__'
+    | '/'
+    | '/art'
+    | '/contact'
+    | '/pricing'
+    | '/process'
+    | '/work'
+    | '/work/trade-islands-iced-tea'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -86,7 +117,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PricingRoute: typeof PricingRoute
   ProcessRoute: typeof ProcessRoute
-  WorkRoute: typeof WorkRoute
+  WorkRoute: typeof WorkRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -133,8 +164,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/trade-islands-iced-tea': {
+      id: '/work/trade-islands-iced-tea'
+      path: '/trade-islands-iced-tea'
+      fullPath: '/work/trade-islands-iced-tea'
+      preLoaderRoute: typeof WorkTradeIslandsIcedTeaRouteImport
+      parentRoute: typeof WorkRoute
+    }
   }
 }
+
+interface WorkRouteChildren {
+  WorkTradeIslandsIcedTeaRoute: typeof WorkTradeIslandsIcedTeaRoute
+}
+
+const WorkRouteChildren: WorkRouteChildren = {
+  WorkTradeIslandsIcedTeaRoute: WorkTradeIslandsIcedTeaRoute,
+}
+
+const WorkRouteWithChildren = WorkRoute._addFileChildren(WorkRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -142,7 +190,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PricingRoute: PricingRoute,
   ProcessRoute: ProcessRoute,
-  WorkRoute: WorkRoute,
+  WorkRoute: WorkRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
