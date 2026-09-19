@@ -27,6 +27,14 @@ export const Route = createFileRoute("/work/")({
 
 const projects = [
   {
+    title: "Trade Islands Iced Tea",
+    meta: "Branding, UI/UX, Packaging",
+    body: "A full rebranding for a lemon iced tea, from logo and packaging to a bold lilac-and-gold visual identity.",
+    image: tradeIslands.url,
+    tint: "bg-sand",
+    to: "/work/trade-islands-iced-tea",
+  },
+  {
     title: "Meadow & Grain",
     meta: "Identity, Illustration — 2024",
     body: "A full visual identity for a slow-living florist collective, built from hand-drawn botanical marks and a soft paper palette.",
