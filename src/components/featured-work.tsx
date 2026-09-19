@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import tradeIslands from "@/assets/trade-islands.png.asset.json";
-import sonaraBudha from "@/assets/sonara-budha.png.asset.json";
+import tradeIslands from "@/assets/trade-islands.png";
+import sonaraBudha from "@/assets/sonara-budha.png";
 
 function ArrowBadge() {
   return (
@@ -45,7 +45,7 @@ export function FeaturedWork() {
               className="group flex flex-col rounded-[24px] bg-background p-4 transition-shadow hover:shadow-md"
             >
               <img
-                src={tradeIslands.url}
+                src={tradeIslands}
                 alt="Trade Islands lemon iced tea can rebranding"
                 loading="lazy"
                 width={1200}
@@ -69,7 +69,7 @@ export function FeaturedWork() {
             {/* Card 2 */}
             <article className="flex flex-col rounded-[24px] bg-background p-4">
               <img
-                src={sonaraBudha.url}
+                src={sonaraBudha}
                 alt="Sonara Budha jewellers rebranding"
                 loading="lazy"
                 width={1200}

@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/logo.png.asset.json";
 
 const links = [
   { to: "/work", label: "Work" },

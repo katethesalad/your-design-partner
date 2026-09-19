@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Check } from "lucide-react";
-import tradeIslands from "@/assets/trade-islands.png.asset.json";
-import tradeIslandsPackaging from "@/assets/trade-islands-packaging-2.png.asset.json";
-import canBlueberry from "@/assets/trade-islands-can-blueberry.webp.asset.json";
-import canLemon from "@/assets/trade-islands-can-lemon.webp.asset.json";
-import canOrange from "@/assets/trade-islands-can-orange.png.asset.json";
+import tradeIslands from "@/assets/trade-islands.png";
+import tradeIslandsPackaging from "@/assets/trade-islands-packaging-2.png";
+import canBlueberry from "@/assets/trade-islands-can-blueberry.webp";
+import canLemon from "@/assets/trade-islands-can-lemon.webp";
+import canOrange from "@/assets/trade-islands-can-orange.png";
 
 const flavourCans = [
   { asset: canBlueberry, alt: "Trade Islands Blueberry Iced Tea can close-up" },
@@ -92,7 +92,7 @@ function TradeIslandsPage() {
             lilac-and-gold visual identity, carried through the brand's digital experience.
           </p>
           <img
-            src={tradeIslands.url}
+            src={tradeIslands}
             alt="Trade Islands Iced Tea can with lilac-and-gold branding"
             width={1200}
             height={900}
@@ -157,7 +157,7 @@ function TradeIslandsPage() {
           </span>
         </div>
         <img
-          src={tradeIslandsPackaging.url}
+          src={tradeIslandsPackaging}
           alt="Trade Islands Iced Tea packaging — three cans and a set of playful fruit patterns"
           width={1335}
           height={1920}
@@ -167,7 +167,7 @@ function TradeIslandsPage() {
           {flavourCans.map((can) => (
             <img
               key={can.alt}
-              src={can.asset.url}
+              src={can.asset}
               alt={can.alt}
               width={1200}
               height={1200}
