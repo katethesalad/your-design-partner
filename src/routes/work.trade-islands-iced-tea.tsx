@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Check } from "lucide-react";
 import tradeIslands from "@/assets/trade-islands.png.asset.json";
+import tradeIslandsPackaging from "@/assets/trade-islands-packaging.png.asset.json";
 
 export const Route = createFileRoute("/work/trade-islands-iced-tea")({
   head: () => ({
@@ -126,6 +127,15 @@ function TradeIslandsPage() {
             </div>
           ))}
         </div>
+
+        {/* Packaging section image */}
+        <img
+          src={tradeIslandsPackaging.url}
+          alt="Trade Islands Iced Tea packaging — three cans and a set of playful fruit patterns"
+          width={1335}
+          height={1920}
+          className="mt-8 w-full rounded-[24px] object-cover"
+        />
 
         {/* CTA */}
         <div className="mt-8 rounded-[28px] bg-card p-8 text-center ring-1 ring-foreground/5 md:p-12">
