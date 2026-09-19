@@ -134,7 +134,7 @@ function TradeIslandsPage() {
           <p className="mt-8 text-[11px] font-medium tracking-wide text-muted-foreground">
             DESCRIPTION
           </p>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed md:text-base">
+          <p className="mt-2 max-w-xl text-sm leading-relaxed md:text-base">
             The packaging for Trade Islands Iced Tea was designed to capture a vibrant, carefree
             island spirit. Inspired by tropical landscapes and laid-back beach culture, the visual
             language leans into bright, sun-soaked colors and playful, organic shapes that evoke
