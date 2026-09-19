@@ -3,7 +3,7 @@ import workMeadow from "@/assets/work-meadow.jpg";
 import workCity from "@/assets/work-city.jpg";
 import workKindred from "@/assets/work-kindred.jpg";
 import workEditorial from "@/assets/work-editorial.jpg";
-import tradeIslands from "@/assets/trade-islands.png.asset.json";
+import tradeIslands from "@/assets/trade-islands.png";
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
@@ -30,7 +30,7 @@ const projects = [
     title: "Trade Islands Iced Tea",
     meta: "Branding, UI/UX, Packaging",
     body: "A full rebranding for a lemon iced tea, from logo and packaging to a bold lilac-and-gold visual identity.",
-    image: tradeIslands.url,
+    image: tradeIslands,
     tint: "bg-sand",
     to: "/work/trade-islands-iced-tea",
   },
