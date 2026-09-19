@@ -208,6 +208,12 @@
   animation: artwork-breathe 6s ease-in-out infinite;
 }
 
+/* Footer confetti: smaller than the hero pieces (scale property, so the
+   drift transform animation is unaffected) */
+.confetti-sm {
+  scale: 0.6;
+}
+
 @media (min-width: 768px) {
   .confetti-triangle {
     width: 0.8rem;

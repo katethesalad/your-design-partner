@@ -4,14 +4,14 @@ export function SiteFooter() {
   return (
     <footer className="mx-auto max-w-6xl space-y-8 px-6 py-14 text-center">
       <div className="relative mx-auto w-fit">
-        <span className="confetti confetti-triangle left-[2%] top-[18%] bg-logo-orange [animation-delay:-1.2s]" />
-        <span className="confetti confetti-pill left-[12%] top-[64%] bg-logo-yellow [animation-delay:-3.4s]" />
-        <span className="confetti confetti-pinched left-[7%] top-[90%] bg-logo-pink [animation-delay:-2.2s]" />
-        <span className="confetti confetti-starburst left-[24%] top-[6%] bg-logo-pink [animation-delay:-4.1s]" />
-        <span className="confetti confetti-pill right-[24%] top-[3%] bg-logo-yellow [animation-delay:-.8s]" />
-        <span className="confetti confetti-triangle right-[10%] top-[24%] bg-logo-orange [animation-delay:-2.9s]" />
-        <span className="confetti confetti-starburst right-[2%] top-[62%] bg-logo-pink [animation-delay:-4.8s]" />
-        <span className="confetti confetti-pinched right-[13%] top-[92%] bg-logo-yellow [animation-delay:-1.7s]" />
+        <span className="confetti confetti-sm confetti-triangle left-[-16%] top-[14%] bg-logo-orange [animation-delay:-1.2s]" />
+        <span className="confetti confetti-sm confetti-pill left-[-7%] top-[60%] bg-logo-yellow [animation-delay:-3.4s]" />
+        <span className="confetti confetti-sm confetti-pinched left-[-20%] top-[86%] bg-logo-pink [animation-delay:-2.2s]" />
+        <span className="confetti confetti-sm confetti-starburst left-[-2%] top-[-4%] bg-logo-pink [animation-delay:-4.1s]" />
+        <span className="confetti confetti-sm confetti-pill right-[-2%] top-[-4%] bg-logo-yellow [animation-delay:-.8s]" />
+        <span className="confetti confetti-sm confetti-triangle right-[-18%] top-[26%] bg-logo-orange [animation-delay:-2.9s]" />
+        <span className="confetti confetti-sm confetti-starburst right-[-6%] top-[58%] bg-logo-pink [animation-delay:-4.8s]" />
+        <span className="confetti confetti-sm confetti-pinched right-[-20%] top-[88%] bg-logo-yellow [animation-delay:-1.7s]" />
         <img
           src={pigeonAsset.url}
           alt="Pigeon mascot"
