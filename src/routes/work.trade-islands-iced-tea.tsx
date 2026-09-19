@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Check } from "lucide-react";
 import tradeIslands from "@/assets/trade-islands.png.asset.json";
-import tradeIslandsPackaging from "@/assets/trade-islands-packaging.png.asset.json";
+import tradeIslandsPackaging from "@/assets/trade-islands-packaging-2.png.asset.json";
 
 export const Route = createFileRoute("/work/trade-islands-iced-tea")({
   head: () => ({
