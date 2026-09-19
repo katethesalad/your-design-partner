@@ -33,7 +33,7 @@ function ArtPage() {
   return (
     <main className="px-6 py-16">
       <div className="mx-auto max-w-6xl">
-        <h1 className="font-display text-5xl italic md:text-6xl">Art, just because.</h1>
+        <h1 className="font-sans text-5xl font-semibold tracking-tight md:text-6xl">Art, just because.</h1>
         <p className="mt-6 max-w-[44ch] text-pretty text-lg leading-relaxed text-muted-foreground">
           Personal drawings, colour studies and ideas made away from client work.
         </p>
