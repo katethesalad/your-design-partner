@@ -80,6 +80,35 @@ function WorkPage() {
 
         <div className="mt-16 grid gap-12 md:grid-cols-2">
           {projects.map((p) => {
+            if (p.to) {
+              return (
+                <Link
+                  key={p.title}
+                  to={p.to}
+                  className="group flex flex-col gap-6 md:col-span-2 md:flex-row md:items-center md:gap-10"
+                >
+                  <div
+                    className={`relative w-full shrink-0 overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 md:w-1/2 ${p.tint}`}
+                  >
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      loading="lazy"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] md:aspect-[4/5]"
+                    />
+                  </div>
+                  <div>
+                    <h2 className="font-sans text-2xl md:text-3xl">{p.title}</h2>
+                    <p className="text-sm text-muted-foreground">{p.meta}</p>
+                    <p className="mt-3 max-w-[40ch] text-pretty leading-relaxed">{p.body}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium">
+                      View project
+                      <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+                    </span>
+                  </div>
+                </Link>
+              );
+            }
             const card = (
               <article className="group space-y-4">
                 <div
@@ -99,13 +128,7 @@ function WorkPage() {
                 </div>
               </article>
             );
-            return p.to ? (
-              <Link key={p.title} to={p.to} className="block">
-                {card}
-              </Link>
-            ) : (
-              card
-            );
+            return card;
           })}
         </div>
       </div>
