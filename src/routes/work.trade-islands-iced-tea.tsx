@@ -68,7 +68,7 @@ function TradeIslandsPage() {
             {disciplines.map((d) => (
               <span
                 key={d.label}
-                className={`rounded-full px-4 py-1.5 text-[11px] font-semibold tracking-wide text-foreground ${d.color}`}
+                className={`rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-foreground ${d.color}`}
               >
                 {d.label}
               </span>
