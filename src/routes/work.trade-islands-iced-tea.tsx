@@ -128,7 +128,25 @@ function TradeIslandsPage() {
           ))}
         </div>
 
-        {/* Packaging section image */}
+        {/* Packaging section */}
+        <div className="mt-8">
+          <h2 className="font-sans text-5xl font-bold tracking-tight md:text-7xl">Packaging</h2>
+          <p className="mt-8 text-[11px] font-medium tracking-wide text-muted-foreground">
+            DESCRIPTION
+          </p>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed md:text-base">
+            The packaging for Trade Islands Iced Tea was designed to capture a vibrant, carefree
+            island spirit. Inspired by tropical landscapes and laid-back beach culture, the visual
+            language leans into bright, sun-soaked colors and playful, organic shapes that evoke
+            movement and warmth. Fluid forms and beachy hues work together to create a sense of
+            refreshment and escape, reinforcing the product's light, easygoing personality. The
+            overall aesthetic is bold yet approachable, positioning the brand as both fun and
+            inviting while clearly communicating its tropical essence.
+          </p>
+          <span className="mt-8 inline-flex rounded-full border border-foreground/20 px-4 py-1.5 text-[11px] font-medium tracking-wide text-foreground">
+            PATTERN
+          </span>
+        </div>
         <img
           src={tradeIslandsPackaging.url}
           alt="Trade Islands Iced Tea packaging — three cans and a set of playful fruit patterns"
