@@ -40,7 +40,7 @@ export function SiteFooter() {
       </div>
 
       <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-        Currently taking new projects for Q3
+        CURRENTLY TAKING NEW PROJECTS!
       </p>
 
       <a
