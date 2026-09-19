@@ -24,8 +24,8 @@ export const Route = createFileRoute("/work/trade-islands-iced-tea")({
 
 const disciplines = [
   { label: "BRANDING", color: "bg-[#e0ad34]" },
-  { label: "UI/UX", color: "bg-[#cbaed3]" },
-  { label: "PACKAGING", color: "bg-[#f58127]" },
+  { label: "UI/UX", color: "bg-[#D9DAD9]" },
+  { label: "PACKAGING", color: "bg-[#cbaed3]" },
 ];
 
 const deliverables = [
