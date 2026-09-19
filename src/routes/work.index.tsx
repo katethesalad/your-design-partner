@@ -78,7 +78,7 @@ function WorkPage() {
           paper and ends as something a client can actually run with.
         </p>
 
-        <div className="mt-16 flex flex-col gap-16">
+        <div className="mt-16 grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-x-8 md:gap-y-16">
           {projects.map((p) => {
             const card = (
               <div className="group flex flex-col gap-5">
