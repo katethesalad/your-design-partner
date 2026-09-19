@@ -88,13 +88,13 @@ function WorkPage() {
                   className="group flex flex-col gap-6 md:col-span-2 md:flex-row md:items-center md:gap-10"
                 >
                   <div
-                    className={`relative w-full shrink-0 overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 md:w-1/2 ${p.tint}`}
+                    className={`relative w-full shrink-0 overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 md:w-3/5 ${p.tint}`}
                   >
                     <img
                       src={p.image}
                       alt={p.title}
                       loading="lazy"
-                      className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] md:aspect-[4/5]"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] md:aspect-[3/2]"
                     />
                   </div>
                   <div>
