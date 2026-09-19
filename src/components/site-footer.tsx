@@ -21,8 +21,20 @@ export function SiteFooter() {
         />
       </div>
       <div className="relative mx-auto w-fit">
-        <div className="absolute -right-10 -top-10 size-20 rounded-full bg-accent/20 blur-xl" />
-        <h2 className="font-sans text-4xl italic leading-tight">
+        {/* Mesh gradient ambient lighting behind the heading */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[300px] w-[560px] max-w-[90vw] -translate-x-1/2 -translate-y-1/2 opacity-70 blur-3xl"
+          style={{
+            background: [
+              "radial-gradient(circle at 18% 30%, #e0ad34 0%, transparent 42%)",
+              "radial-gradient(circle at 82% 24%, #cbaed3 0%, transparent 46%)",
+              "radial-gradient(circle at 30% 78%, #f58127 0%, transparent 40%)",
+              "radial-gradient(circle at 76% 72%, #cbaed3 0%, transparent 44%)",
+            ].join(", "),
+          }}
+        />
+        <h2 className="relative font-sans text-4xl italic leading-tight">
           Ready to make <br /> something <span className="text-primary">real</span>?
         </h2>
       </div>
