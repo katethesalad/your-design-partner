@@ -2,6 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Check } from "lucide-react";
 import tradeIslands from "@/assets/trade-islands.png.asset.json";
 import tradeIslandsPackaging from "@/assets/trade-islands-packaging-2.png.asset.json";
+import canBlueberry from "@/assets/trade-islands-can-blueberry.webp.asset.json";
+import canLemon from "@/assets/trade-islands-can-lemon.webp.asset.json";
+import canOrange from "@/assets/trade-islands-can-orange.png.asset.json";
+
+const flavourCans = [
+  { asset: canBlueberry, alt: "Trade Islands Blueberry Iced Tea can close-up" },
+  { asset: canLemon, alt: "Trade Islands Lemon Iced Tea can close-up" },
+  { asset: canOrange, alt: "Trade Islands Orange Iced Tea can close-up" },
+];
 
 export const Route = createFileRoute("/work/trade-islands-iced-tea")({
   head: () => ({
@@ -154,6 +163,18 @@ function TradeIslandsPage() {
           height={1920}
           className="mt-8 w-full rounded-[24px] object-cover"
         />
+        <div className="mt-4 grid gap-4 md:grid-cols-3">
+          {flavourCans.map((can) => (
+            <img
+              key={can.alt}
+              src={can.asset.url}
+              alt={can.alt}
+              width={1200}
+              height={1200}
+              className="w-full rounded-[24px] object-cover"
+            />
+          ))}
+        </div>
 
         {/* CTA */}
         <div className="mt-8 rounded-[28px] bg-card p-8 text-center ring-1 ring-foreground/5 md:p-12">
