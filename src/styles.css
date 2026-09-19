@@ -69,7 +69,7 @@
   --card: oklch(0.995 0.005 95);
   --card-foreground: oklch(0.223 0.008 75);
 
-  --primary: oklch(0.618 0.181 39);
+  --primary: #f58127;
   --primary-foreground: oklch(0.985 0.008 95);
 
   --secondary: oklch(0.94 0.016 85);
@@ -86,7 +86,7 @@
 
   --border: oklch(0.223 0.008 75 / 10%);
   --input: oklch(0.223 0.008 75 / 14%);
-  --ring: oklch(0.618 0.181 39 / 45%);
+  --ring: #f5812773;
 
   /* Illustration palette */
   --forest: oklch(0.3 0.038 158);
