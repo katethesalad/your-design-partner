@@ -78,59 +78,44 @@ function WorkPage() {
           paper and ends as something a client can actually run with.
         </p>
 
-        <div className="mt-16 grid gap-12 md:grid-cols-2">
+        <div className="mt-16 flex flex-col gap-16">
           {projects.map((p) => {
-            if (p.to) {
-              return (
-                <Link
-                  key={p.title}
-                  to={p.to}
-                  className="group flex flex-col gap-5 md:col-span-2"
-                >
-                  <div
-                    className={`relative w-full overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 ${p.tint}`}
-                  >
-                    <img
-                      src={p.image}
-                      alt={p.title}
-                      loading="lazy"
-                      className="aspect-[16/7] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] md:aspect-[5/2]"
-                    />
-                  </div>
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-                    <div>
-                      <h2 className="font-sans text-2xl md:text-3xl">{p.title}</h2>
-                      <p className="text-sm text-muted-foreground">{p.meta}</p>
-                      <p className="mt-3 max-w-[55ch] text-pretty leading-relaxed">{p.body}</p>
-                    </div>
-                    <span className="inline-flex items-center gap-2 text-sm font-medium">
-                      View project
-                      <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-                    </span>
-                  </div>
-                </Link>
-              );
-            }
             const card = (
-              <article className="group space-y-4">
+              <div className="group flex flex-col gap-5">
                 <div
-                  className={`relative aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 ${p.tint}`}
+                  className={`relative w-full overflow-hidden rounded-[2rem] ring-1 ring-foreground/5 ${p.tint}`}
                 >
                   <img
                     src={p.image}
                     alt={p.title}
                     loading="lazy"
-                    className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    className="aspect-[16/7] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] md:aspect-[5/2]"
                   />
                 </div>
-                <div>
-                  <h2 className="font-sans text-2xl">{p.title}</h2>
-                  <p className="text-sm text-muted-foreground">{p.meta}</p>
-                  <p className="mt-3 text-pretty leading-relaxed">{p.body}</p>
+                <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+                  <div>
+                    <h2 className="font-sans text-2xl md:text-3xl">{p.title}</h2>
+                    <p className="text-sm text-muted-foreground">{p.meta}</p>
+                    <p className="mt-3 max-w-[55ch] text-pretty leading-relaxed">{p.body}</p>
+                  </div>
+                  {p.to && (
+                    <span className="inline-flex items-center gap-2 text-sm font-medium">
+                      View project
+                      <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+                    </span>
+                  )}
                 </div>
+              </div>
+            );
+            return p.to ? (
+              <Link key={p.title} to={p.to} className="group">
+                {card}
+              </Link>
+            ) : (
+              <article key={p.title} className="group">
+                {card}
               </article>
             );
-            return card;
           })}
         </div>
       </div>
