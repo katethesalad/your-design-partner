@@ -292,11 +292,12 @@ function Index() {
               </ul>
             </div>
 
-            {/* Story — most popular */}
-            <div className="relative flex flex-col rounded-[1.75rem] border border-foreground/10 bg-white p-8 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.18)]">
-              <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1 text-[10px] font-medium">
-                <Sparkles className="h-3 w-3" /> Most Popular
+            {/* Story — recommended */}
+            <div className="relative rounded-[2rem] bg-[linear-gradient(120deg,#e0ad34,#cbaed3,#f58127,#cbaed3,#e0ad34)] p-[2px] shadow-[0_24px_55px_-20px_rgba(0,0,0,0.22)] md:-mt-5">
+              <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gradient-to-r from-[#e0ad34] via-[#cbaed3] to-[#f58127] px-4 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
+                <Sparkles className="h-3 w-3" /> Recommended
               </span>
+              <div className="flex h-full flex-col rounded-[calc(2rem-2px)] bg-white p-8">
               <h3 className="text-lg font-semibold">Story</h3>
               <p className="mt-1 text-sm text-muted-foreground">Deep identity and collateral.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
@@ -312,6 +313,7 @@ function Index() {
                   </li>
                 ))}
               </ul>
+              </div>
             </div>
 
             {/* Bloom */}
