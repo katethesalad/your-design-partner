@@ -94,7 +94,7 @@ function WorkPage() {
                       src={p.image}
                       alt={p.title}
                       loading="lazy"
-                      className="aspect-[16/7] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] md:aspect-[5/2]"
+                      className="aspect-[16/7] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] md:aspect-[2/1]"
                     />
                   </div>
                   <div>
