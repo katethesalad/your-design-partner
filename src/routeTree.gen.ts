@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as WorkIndexRouteImport } from './routes/work.index'
 import { Route as WorkTradeIslandsIcedTeaRouteImport } from './routes/work.trade-islands-iced-tea'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const WorkRoute = WorkRouteImport.update({
   path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkIndexRoute = WorkIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => WorkRoute,
+} as any)
 const WorkTradeIslandsIcedTeaRoute = WorkTradeIslandsIcedTeaRouteImport.update({
   id: '/trade-islands-iced-tea',
   path: '/trade-islands-iced-tea',
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/process': typeof ProcessRoute
   '/work': typeof WorkRouteWithChildren
   '/work/trade-islands-iced-tea': typeof WorkTradeIslandsIcedTeaRoute
+  '/work/': typeof WorkIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -68,8 +75,8 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
-  '/work': typeof WorkRouteWithChildren
   '/work/trade-islands-iced-tea': typeof WorkTradeIslandsIcedTeaRoute
+  '/work': typeof WorkIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +87,7 @@ export interface FileRoutesById {
   '/process': typeof ProcessRoute
   '/work': typeof WorkRouteWithChildren
   '/work/trade-islands-iced-tea': typeof WorkTradeIslandsIcedTeaRoute
+  '/work/': typeof WorkIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +99,7 @@ export interface FileRouteTypes {
     | '/process'
     | '/work'
     | '/work/trade-islands-iced-tea'
+    | '/work/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -98,8 +107,8 @@ export interface FileRouteTypes {
     | '/contact'
     | '/pricing'
     | '/process'
-    | '/work'
     | '/work/trade-islands-iced-tea'
+    | '/work'
   id:
     | '__root__'
     | '/'
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/process'
     | '/work'
     | '/work/trade-islands-iced-tea'
+    | '/work/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -164,6 +174,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/': {
+      id: '/work/'
+      path: '/'
+      fullPath: '/work/'
+      preLoaderRoute: typeof WorkIndexRouteImport
+      parentRoute: typeof WorkRoute
+    }
     '/work/trade-islands-iced-tea': {
       id: '/work/trade-islands-iced-tea'
       path: '/trade-islands-iced-tea'
@@ -176,10 +193,12 @@ declare module '@tanstack/react-router' {
 
 interface WorkRouteChildren {
   WorkTradeIslandsIcedTeaRoute: typeof WorkTradeIslandsIcedTeaRoute
+  WorkIndexRoute: typeof WorkIndexRoute
 }
 
 const WorkRouteChildren: WorkRouteChildren = {
   WorkTradeIslandsIcedTeaRoute: WorkTradeIslandsIcedTeaRoute,
+  WorkIndexRoute: WorkIndexRoute,
 }
 
 const WorkRouteWithChildren = WorkRoute._addFileChildren(WorkRouteChildren)
