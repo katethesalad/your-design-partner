@@ -53,7 +53,7 @@ function ProcessPage() {
       <div className="blob-shape absolute -left-20 top-6 -z-10 size-64 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-sun opacity-60 blur-xl" />
 
       <div className="mx-auto max-w-4xl">
-        <h1 className="max-w-[16ch] text-balance font-display text-5xl italic leading-[0.95] md:text-6xl">
+        <h1 className="max-w-[16ch] text-balance font-sans text-5xl font-semibold leading-[0.95] tracking-tight md:text-6xl">
           My design process
         </h1>
         <p className="mt-6 max-w-[45ch] text-pretty text-lg leading-relaxed text-muted-foreground">

@@ -26,7 +26,7 @@ function ContactPage() {
       <div className="blob-shape absolute -left-20 top-8 -z-10 size-64 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-petal opacity-60 blur-xl" />
       <div className="mx-auto max-w-3xl">
         <span className="font-mono text-xs uppercase text-primary">Start a project</span>
-        <h1 className="mt-5 text-balance font-display text-5xl italic leading-[0.95] md:text-7xl">
+        <h1 className="mt-5 text-balance font-sans text-5xl font-semibold leading-[0.95] tracking-tight md:text-7xl">
           Let&apos;s make something that feels like you.
         </h1>
         <p className="mx-auto mt-7 max-w-[42ch] text-pretty text-lg leading-relaxed text-muted-foreground">
