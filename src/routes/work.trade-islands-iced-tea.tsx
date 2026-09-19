@@ -67,10 +67,10 @@ function TradeIslandsPage() {
           <div className="flex flex-wrap gap-2">
             {disciplines.map((d) => (
               <span
-                key={d}
-                className="rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground"
+                key={d.label}
+                className={`rounded-full px-4 py-1.5 text-[11px] font-semibold tracking-wide text-foreground ${d.color}`}
               >
-                {d}
+                {d.label}
               </span>
             ))}
           </div>
