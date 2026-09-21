@@ -302,3 +302,12 @@
     animation: none;
   }
 }
+
+/* Custom triangle cursor: hide the native cursor on mouse/trackpad devices. */
+@media (pointer: fine) {
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}
