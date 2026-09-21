@@ -7,6 +7,7 @@ import canLemon from "@/assets/trade-islands-can-lemon.webp";
 import canOrange from "@/assets/trade-islands-can-orange.png";
 import brandBoard from "@/assets/trade-islands-brand-board.png";
 import { LightboxGallery } from "@/components/lightbox";
+import { Reveal } from "@/components/reveal";
 
 const heroImage = {
   src: canMockup,
@@ -99,52 +100,10 @@ function TradeIslandsPage() {
             </Link>
 
             {/* Intro */}
-            <div className="mt-8 rounded-[36px] border-2 border-foreground bg-background p-6 md:p-12">
-              <h1 className="sr-only">Trade Islands Iced Tea</h1>
-              <div className="mb-6 flex flex-wrap gap-2 md:hidden">
-                {disciplines.map((d) => (
-                  <span
-                    key={d.label}
-                    className={`rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-foreground ${d.color}`}
-                  >
-                    {d.label}
-                  </span>
-                ))}
-              </div>
-              <p className="text-justify font-sans text-3xl font-bold leading-[1.12] tracking-tight md:text-6xl">
-                Trade Islands is the go-to brand for premium iced teas, offering a refreshing
-                range of tropical flavors perfect for every occasion.
-              </p>
-              <div className="mb-5 mt-14 flex flex-col gap-8 md:mb-0 md:mt-24 md:flex-row md:items-end md:justify-between">
-                <div className="flex flex-wrap gap-x-24 gap-y-6">
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                      Year
-                    </p>
-                    <p className="mt-3 text-sm md:text-base">2024</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                      Scope
-                    </p>
-                    <div className="mt-3 space-y-0.5 text-sm md:text-base">
-                      <p>Branding</p>
-                      <p>Website</p>
-                      <p>Packaging</p>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                      Software
-                    </p>
-                    <div className="mt-3 space-y-0.5 text-sm md:text-base">
-                      <p>Illustrator</p>
-                      <p>Photoshop</p>
-                      <p>XD</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="hidden flex-wrap gap-2 md:flex md:justify-end">
+            <Reveal className="mt-8">
+              <div className="rounded-[36px] border-2 border-foreground bg-background p-6 md:p-12">
+                <h1 className="sr-only">Trade Islands Iced Tea</h1>
+                <div className="mb-6 flex flex-wrap gap-2 md:hidden">
                   {disciplines.map((d) => (
                     <span
                       key={d.label}
@@ -154,63 +113,115 @@ function TradeIslandsPage() {
                     </span>
                   ))}
                 </div>
+                <p className="text-justify font-sans text-3xl font-bold leading-[1.12] tracking-tight md:text-6xl">
+                  Trade Islands is the go-to brand for premium iced teas, offering a refreshing
+                  range of tropical flavors perfect for every occasion.
+                </p>
+                <div className="mb-5 mt-14 flex flex-col gap-8 md:mb-0 md:mt-24 md:flex-row md:items-end md:justify-between">
+                  <div className="flex flex-wrap gap-x-24 gap-y-6">
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                        Year
+                      </p>
+                      <p className="mt-3 text-sm md:text-base">2024</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                        Scope
+                      </p>
+                      <div className="mt-3 space-y-0.5 text-sm md:text-base">
+                        <p>Branding</p>
+                        <p>Website</p>
+                        <p>Packaging</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                        Software
+                      </p>
+                      <div className="mt-3 space-y-0.5 text-sm md:text-base">
+                        <p>Illustrator</p>
+                        <p>Photoshop</p>
+                        <p>XD</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hidden flex-wrap gap-2 md:flex md:justify-end">
+                    {disciplines.map((d) => (
+                      <span
+                        key={d.label}
+                        className={`rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-foreground ${d.color}`}
+                      >
+                        {d.label}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
+            </Reveal>
 
-            <button
-              type="button"
-              onClick={() => open(0)}
-              aria-label="Open fullscreen image"
-              className="mt-6 block w-full cursor-zoom-in"
-            >
-              <img
-                src={heroImage.src}
-                alt={heroImage.alt}
-                width={1200}
-                height={900}
-                className="aspect-[4/3] w-full rounded-[18px] object-cover transition-opacity hover:opacity-90"
-              />
-            </button>
+            <Reveal delay={120} className="mt-6">
+              <button
+                type="button"
+                onClick={() => open(0)}
+                aria-label="Open fullscreen image"
+                className="block w-full cursor-zoom-in"
+              >
+                <img
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  width={1200}
+                  height={900}
+                  className="aspect-[4/3] w-full rounded-[18px] object-cover transition-opacity hover:opacity-90"
+                />
+              </button>
+            </Reveal>
 
             {/* Overview + deliverables */}
             <div className="mt-6 grid gap-4 md:grid-cols-3">
-              <div className="rounded-[24px] bg-card p-6 ring-1 ring-foreground/5 md:col-span-2">
-                <h2 className="font-sans text-2xl font-semibold tracking-tight">The brief</h2>
-                <p className="mt-4 text-sm leading-relaxed md:text-base">
-                  Trade Islands wanted to grow from a local favourite into a brand people recognise at
-                  a glance. The rebrand needed to keep the easy, sunny character of the original while
-                  giving it a bolder shelf presence and a consistent look across packaging and digital.
-                </p>
-                <p className="mt-4 text-sm leading-relaxed md:text-base">
-                  We landed on a lilac-and-gold identity: playful but premium, with a flexible system
-                  that stretches from cans and labels to the website without losing its voice.
-                </p>
-              </div>
-              <div className="rounded-[24px] bg-card p-6 ring-1 ring-foreground/5">
-                <h2 className="font-sans text-2xl font-semibold tracking-tight">Deliverables</h2>
-                <ul className="mt-4 space-y-3">
-                  {deliverables.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm">
-                      <Check className="mt-0.5 size-4 shrink-0 text-primary" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <Reveal className="md:col-span-2">
+                <div className="h-full rounded-[24px] bg-card p-6 ring-1 ring-foreground/5">
+                  <h2 className="font-sans text-2xl font-semibold tracking-tight">The brief</h2>
+                  <p className="mt-4 text-sm leading-relaxed md:text-base">
+                    Trade Islands wanted to grow from a local favourite into a brand people recognise at
+                    a glance. The rebrand needed to keep the easy, sunny character of the original while
+                    giving it a bolder shelf presence and a consistent look across packaging and digital.
+                  </p>
+                  <p className="mt-4 text-sm leading-relaxed md:text-base">
+                    We landed on a lilac-and-gold identity: playful but premium, with a flexible system
+                    that stretches from cans and labels to the website without losing its voice.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal delay={120}>
+                <div className="h-full rounded-[24px] bg-card p-6 ring-1 ring-foreground/5">
+                  <h2 className="font-sans text-2xl font-semibold tracking-tight">Deliverables</h2>
+                  <ul className="mt-4 space-y-3">
+                    {deliverables.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm">
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
             </div>
 
             {/* Highlights */}
             <div className="mt-4 grid gap-4 md:grid-cols-3">
-              {highlights.map((h) => (
-                <div key={h.title} className="rounded-[24px] bg-card p-6 ring-1 ring-foreground/5">
-                  <h3 className="font-sans text-lg font-semibold tracking-tight">{h.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{h.body}</p>
-                </div>
+              {highlights.map((h, i) => (
+                <Reveal key={h.title} delay={i * 120}>
+                  <div className="h-full rounded-[24px] bg-card p-6 ring-1 ring-foreground/5">
+                    <h3 className="font-sans text-lg font-semibold tracking-tight">{h.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{h.body}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
 
             {/* Brand identity section */}
-            <div className="mt-8">
+            <Reveal className="mt-8">
               <h2 className="font-sans text-5xl font-bold tracking-tight md:text-7xl">
                 Brand identity
               </h2>
@@ -223,24 +234,26 @@ function TradeIslandsPage() {
                 the yellow, orange, lilac and soft grey are pulled straight from the islands and carry
                 across cans, patterns and the website.
               </p>
-            </div>
-            <button
-              type="button"
-              onClick={() => open(5)}
-              aria-label="Open fullscreen image"
-              className="mt-8 block w-full cursor-zoom-in"
-            >
-              <img
-                src={brandBoardImage.src}
-                alt={brandBoardImage.alt}
-                width={1920}
-                height={942}
-                className="w-full rounded-[24px] object-cover transition-opacity hover:opacity-90"
-              />
-            </button>
+            </Reveal>
+            <Reveal className="mt-8">
+              <button
+                type="button"
+                onClick={() => open(5)}
+                aria-label="Open fullscreen image"
+                className="block w-full cursor-zoom-in"
+              >
+                <img
+                  src={brandBoardImage.src}
+                  alt={brandBoardImage.alt}
+                  width={1920}
+                  height={942}
+                  className="w-full rounded-[24px] object-cover transition-opacity hover:opacity-90"
+                />
+              </button>
+            </Reveal>
 
             {/* Packaging section */}
-            <div className="mt-8">
+            <Reveal className="mt-8">
               <h2 className="font-sans text-5xl font-bold tracking-tight md:text-7xl">Packaging</h2>
               <p className="mt-8 text-[11px] font-medium tracking-wide text-muted-foreground">
                 DESCRIPTION
@@ -257,56 +270,61 @@ function TradeIslandsPage() {
               <span className="mt-8 inline-flex rounded-full border border-foreground/20 px-4 py-1.5 text-[11px] font-medium tracking-wide text-foreground">
                 PATTERN
               </span>
-            </div>
-            <button
-              type="button"
-              onClick={() => open(1)}
-              aria-label="Open fullscreen image"
-              className="mt-8 block w-full cursor-zoom-in"
-            >
-              <img
-                src={packagingImage.src}
-                alt={packagingImage.alt}
-                width={1335}
-                height={1920}
-                className="w-full rounded-[24px] object-cover transition-opacity hover:opacity-90"
-              />
-            </button>
+            </Reveal>
+            <Reveal className="mt-8">
+              <button
+                type="button"
+                onClick={() => open(1)}
+                aria-label="Open fullscreen image"
+                className="block w-full cursor-zoom-in"
+              >
+                <img
+                  src={packagingImage.src}
+                  alt={packagingImage.alt}
+                  width={1335}
+                  height={1920}
+                  className="w-full rounded-[24px] object-cover transition-opacity hover:opacity-90"
+                />
+              </button>
+            </Reveal>
             <div className="mt-4 grid gap-4 md:grid-cols-3">
               {flavourCans.map((can, i) => (
-                <button
-                  key={can.alt}
-                  type="button"
-                  onClick={() => open(2 + i)}
-                  aria-label="Open fullscreen image"
-                  className="block w-full cursor-zoom-in"
-                >
-                  <img
-                    src={can.asset}
-                    alt={can.alt}
-                    width={1200}
-                    height={1200}
-                    className="w-full rounded-[24px] object-cover transition-opacity hover:opacity-90"
-                  />
-                </button>
+                <Reveal key={can.alt} delay={i * 120}>
+                  <button
+                    type="button"
+                    onClick={() => open(2 + i)}
+                    aria-label="Open fullscreen image"
+                    className="block w-full cursor-zoom-in"
+                  >
+                    <img
+                      src={can.asset}
+                      alt={can.alt}
+                      width={1200}
+                      height={1200}
+                      className="w-full rounded-[24px] object-cover transition-opacity hover:opacity-90"
+                    />
+                  </button>
+                </Reveal>
               ))}
             </div>
 
             {/* CTA */}
-            <div className="mt-8 rounded-[28px] bg-card p-8 text-center ring-1 ring-foreground/5 md:p-12">
-              <h2 className="font-sans text-3xl font-semibold tracking-tight md:text-4xl">
-                Want a rebrand like this?
-              </h2>
-              <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-                Let's build something people recognise at a glance.
-              </p>
-              <Link
-                to="/contact"
-                className="mt-6 inline-flex items-center rounded-full bg-[#e0ad34] px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
-              >
-                Let's chat
-              </Link>
-            </div>
+            <Reveal className="mt-8">
+              <div className="rounded-[28px] bg-card p-8 text-center ring-1 ring-foreground/5 md:p-12">
+                <h2 className="font-sans text-3xl font-semibold tracking-tight md:text-4xl">
+                  Want a rebrand like this?
+                </h2>
+                <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
+                  Let's build something people recognise at a glance.
+                </p>
+                <Link
+                  to="/contact"
+                  className="mt-6 inline-flex items-center rounded-full bg-[#e0ad34] px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
+                >
+                  Let's chat
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </div>
       )}
