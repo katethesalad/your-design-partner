@@ -108,7 +108,7 @@ function TradeIslandsPage() {
                 Trade Islands is the go-to brand for premium iced teas, offering a refreshing
                 range of tropical flavors perfect for every occasion.
               </p>
-              <div className="mt-14 flex flex-col gap-8 md:mt-24 md:flex-row md:items-end md:justify-between">
+              <div className="mb-12 mt-14 flex flex-col gap-8 md:mb-0 md:mt-24 md:flex-row md:items-end md:justify-between">
                 <div className="flex flex-wrap gap-x-24 gap-y-6">
                   <div>
                     <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
