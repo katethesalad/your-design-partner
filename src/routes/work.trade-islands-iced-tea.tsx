@@ -5,6 +5,7 @@ import tradeIslandsPackaging from "@/assets/trade-islands-packaging-2.png";
 import canBlueberry from "@/assets/trade-islands-can-blueberry.webp";
 import canLemon from "@/assets/trade-islands-can-lemon.webp";
 import canOrange from "@/assets/trade-islands-can-orange.png";
+import brandBoard from "@/assets/trade-islands-brand-board.png";
 import { LightboxGallery } from "@/components/lightbox";
 
 const heroImage = {
@@ -23,10 +24,16 @@ const flavourCans = [
   { asset: canOrange, alt: "Trade Islands Orange Iced Tea can close-up" },
 ];
 
+const brandBoardImage = {
+  src: brandBoard,
+  alt: "Trade Islands brand identity — Atrament and Helvetica type specimens on yellow, and the brand colour palette over a tea field",
+};
+
 const galleryImages = [
   heroImage,
   packagingImage,
   ...flavourCans.map((c) => ({ src: c.asset, alt: c.alt })),
+  brandBoardImage,
 ];
 
 export const Route = createFileRoute("/work/trade-islands-iced-tea")({
