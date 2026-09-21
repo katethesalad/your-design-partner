@@ -94,6 +94,16 @@ function TradeIslandsPage() {
             {/* Intro */}
             <div className="mt-8 rounded-[36px] border-2 border-foreground bg-background p-6 md:p-12">
               <h1 className="sr-only">Trade Islands Iced Tea</h1>
+              <div className="flex flex-wrap gap-2 md:hidden">
+                {disciplines.map((d) => (
+                  <span
+                    key={d.label}
+                    className={`rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-foreground ${d.color}`}
+                  >
+                    {d.label}
+                  </span>
+                ))}
+              </div>
               <p className="text-justify font-sans text-3xl font-bold leading-[1.12] tracking-tight md:text-6xl">
                 Trade Islands is the go-to brand for premium iced teas, offering a refreshing
                 range of tropical flavors perfect for every occasion.
@@ -127,7 +137,7 @@ function TradeIslandsPage() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-wrap justify-center gap-2 md:justify-end">
+                <div className="hidden flex-wrap gap-2 md:flex md:justify-end">
                   {disciplines.map((d) => (
                     <span
                       key={d.label}
