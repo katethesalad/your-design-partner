@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Check } from "lucide-react";
-import tradeIslands from "@/assets/trade-islands.png";
+import canMockup from "@/assets/trade-islands-can-mockup.png";
 import tradeIslandsPackaging from "@/assets/trade-islands-packaging-2.png";
 import canBlueberry from "@/assets/trade-islands-can-blueberry.webp";
 import canLemon from "@/assets/trade-islands-can-lemon.webp";
@@ -8,8 +8,8 @@ import canOrange from "@/assets/trade-islands-can-orange.png";
 import { LightboxGallery } from "@/components/lightbox";
 
 const heroImage = {
-  src: tradeIslands,
-  alt: "Trade Islands Iced Tea can with lilac-and-gold branding",
+  src: canMockup,
+  alt: "Trade Islands Iced Tea can mock-up with lilac-and-gold branding",
 };
 
 const packagingImage = {
