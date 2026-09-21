@@ -28,7 +28,11 @@ export const Route = createFileRoute("/work/")({
 const projects = [
   {
     title: "Trade Islands Iced Tea",
-    meta: "Branding, UI/UX, Packaging",
+    tags: [
+      { label: "BRANDING", color: "bg-[#e0ad34]" },
+      { label: "UI/UX", color: "bg-[#D9DAD9]" },
+      { label: "PACKAGING", color: "bg-[#cbaed3]" },
+    ],
     body: "A full rebranding for a lemon iced tea, from logo and packaging to a bold lilac-and-gold visual identity.",
     image: tradeIslands,
     tint: "bg-sand",
@@ -95,7 +99,20 @@ function WorkPage() {
                 <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
                   <div>
                     <h2 className="font-sans text-2xl md:text-3xl">{p.title}</h2>
-                    <p className="text-sm text-muted-foreground">{p.meta}</p>
+                    {p.tags ? (
+                      <div className="flex flex-wrap gap-2">
+                        {p.tags.map((t) => (
+                          <span
+                            key={t.label}
+                            className={`rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-foreground ${t.color}`}
+                          >
+                            {t.label}
+                          </span>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-sm text-muted-foreground">{p.meta}</p>
+                    )}
                     <p className="mt-3 max-w-[55ch] text-pretty leading-relaxed">{p.body}</p>
                   </div>
                   {p.to && (
