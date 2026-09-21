@@ -94,7 +94,7 @@ function TradeIslandsPage() {
             {/* Intro */}
             <div className="mt-8 rounded-[36px] border-2 border-foreground bg-background p-6 md:p-12">
               <h1 className="sr-only">Trade Islands Iced Tea</h1>
-              <p className="text-center font-sans text-3xl font-bold leading-[1.12] tracking-tight md:text-6xl">
+              <p className="text-justify font-sans text-3xl font-bold leading-[1.12] tracking-tight md:text-6xl">
                 Trade Islands is the go-to brand for premium iced teas, offering a refreshing
                 range of tropical flavors perfect for every occasion.
               </p>
