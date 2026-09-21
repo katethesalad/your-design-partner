@@ -209,6 +209,36 @@ function TradeIslandsPage() {
               ))}
             </div>
 
+            {/* Brand identity section */}
+            <div className="mt-8">
+              <h2 className="font-sans text-5xl font-bold tracking-tight md:text-7xl">
+                Brand identity
+              </h2>
+              <p className="mt-8 text-[11px] font-medium tracking-wide text-muted-foreground">
+                DESCRIPTION
+              </p>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed md:text-base">
+                The identity pairs two typefaces with a warm, sun-soaked palette. Atrament leads the
+                bold, condensed headlines while Helvetica keeps everything else clean and legible —
+                the yellow, orange, lilac and soft grey are pulled straight from the islands and carry
+                across cans, patterns and the website.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => open(5)}
+              aria-label="Open fullscreen image"
+              className="mt-8 block w-full cursor-zoom-in"
+            >
+              <img
+                src={brandBoardImage.src}
+                alt={brandBoardImage.alt}
+                width={1920}
+                height={942}
+                className="w-full rounded-[24px] object-cover transition-opacity hover:opacity-90"
+              />
+            </button>
+
             {/* Packaging section */}
             <div className="mt-8">
               <h2 className="font-sans text-5xl font-bold tracking-tight md:text-7xl">Packaging</h2>
