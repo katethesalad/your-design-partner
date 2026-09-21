@@ -94,7 +94,7 @@ function TradeIslandsPage() {
             {/* Intro */}
             <div className="mt-8 rounded-[36px] border-2 border-foreground bg-background p-6 md:p-12">
               <h1 className="sr-only">Trade Islands Iced Tea</h1>
-              <div className="flex flex-wrap gap-2 md:hidden">
+              <div className="mb-6 flex flex-wrap gap-2 md:hidden">
                 {disciplines.map((d) => (
                   <span
                     key={d.label}
