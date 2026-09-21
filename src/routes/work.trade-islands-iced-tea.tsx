@@ -91,40 +91,69 @@ function TradeIslandsPage() {
               Back to home
             </Link>
 
-            {/* Hero */}
-            <div className="mt-8 rounded-[28px] bg-card p-5 ring-1 ring-foreground/5 md:p-10">
-              <div className="flex flex-wrap gap-2">
-                {disciplines.map((d) => (
-                  <span
-                    key={d.label}
-                    className={`rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-foreground ${d.color}`}
-                  >
-                    {d.label}
-                  </span>
-                ))}
-              </div>
-              <h1 className="mt-6 font-sans text-4xl font-semibold tracking-tight md:text-6xl">
-                Trade Islands Iced Tea
-              </h1>
-              <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                A full rebranding for a lemon iced tea — from logo and packaging to a bold
-                lilac-and-gold visual identity, carried through the brand's digital experience.
+            {/* Intro */}
+            <div className="mt-8 rounded-[36px] border-2 border-foreground bg-background p-6 md:p-12">
+              <h1 className="sr-only">Trade Islands Iced Tea</h1>
+              <p className="max-w-4xl font-sans text-3xl font-bold leading-[1.08] tracking-tight md:text-5xl">
+                Trade Islands is the go-to brand for premium iced teas, offering a refreshing
+                range of tropical flavors perfect for every occasion.
               </p>
-              <button
-                type="button"
-                onClick={() => open(0)}
-                aria-label="Open fullscreen image"
-                className="mt-8 block w-full cursor-zoom-in"
-              >
-                <img
-                  src={heroImage.src}
-                  alt={heroImage.alt}
-                  width={1200}
-                  height={900}
-                  className="aspect-[4/3] w-full rounded-[18px] object-cover transition-opacity hover:opacity-90"
-                />
-              </button>
+              <div className="mt-14 flex flex-col gap-8 md:mt-24 md:flex-row md:items-end md:justify-between">
+                <div className="flex flex-wrap gap-x-14 gap-y-6">
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                      Year
+                    </p>
+                    <p className="mt-3 text-sm md:text-base">2024</p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                      Scope
+                    </p>
+                    <div className="mt-3 space-y-0.5 text-sm md:text-base">
+                      <p>Branding</p>
+                      <p>Website</p>
+                      <p>Packaging</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                      Software
+                    </p>
+                    <div className="mt-3 space-y-0.5 text-sm md:text-base">
+                      <p>Illustrator</p>
+                      <p>Photoshop</p>
+                      <p>XD</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2 md:justify-end">
+                  {disciplines.map((d) => (
+                    <span
+                      key={d.label}
+                      className={`rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-foreground ${d.color}`}
+                    >
+                      {d.label}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
+
+            <button
+              type="button"
+              onClick={() => open(0)}
+              aria-label="Open fullscreen image"
+              className="mt-6 block w-full cursor-zoom-in"
+            >
+              <img
+                src={heroImage.src}
+                alt={heroImage.alt}
+                width={1200}
+                height={900}
+                className="aspect-[4/3] w-full rounded-[18px] object-cover transition-opacity hover:opacity-90"
+              />
+            </button>
 
             {/* Overview + deliverables */}
             <div className="mt-6 grid gap-4 md:grid-cols-3">
