@@ -45,7 +45,7 @@ export function ShapeCursor() {
         "a, button, [role='button'], input, textarea, select, label, summary",
       );
       inner.style.scale = interactive ? "1.7" : "1";
-      inner.style.rotate = interactive ? "180deg" : "0deg";
+      inner.style.rotate = interactive ? "150deg" : "-30deg";
     };
 
     const onDown = () => {
