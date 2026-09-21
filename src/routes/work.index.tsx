@@ -100,7 +100,7 @@ function WorkPage() {
                   <div>
                     <h2 className="font-sans text-2xl md:text-3xl">{p.title}</h2>
                     {p.tags ? (
-                      <div className="flex flex-wrap gap-2">
+                      <div className="mt-3 flex flex-wrap gap-2">
                         {p.tags.map((t) => (
                           <span
                             key={t.label}
