@@ -147,7 +147,7 @@ function TradeIslandsPage() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-wrap justify-center gap-2 md:justify-end">
+                <div className="hidden flex-wrap gap-2 md:flex md:justify-end">
                   {disciplines.map((d) => (
                     <span
                       key={d.label}
