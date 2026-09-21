@@ -5,6 +5,7 @@ import tradeIslandsPackaging from "@/assets/trade-islands-packaging-2.png";
 import canBlueberry from "@/assets/trade-islands-can-blueberry.webp";
 import canLemon from "@/assets/trade-islands-can-lemon.webp";
 import canOrange from "@/assets/trade-islands-can-orange.png";
+import brandBoard from "@/assets/trade-islands-brand-board.png";
 import { LightboxGallery } from "@/components/lightbox";
 
 const heroImage = {
@@ -23,10 +24,16 @@ const flavourCans = [
   { asset: canOrange, alt: "Trade Islands Orange Iced Tea can close-up" },
 ];
 
+const brandBoardImage = {
+  src: brandBoard,
+  alt: "Trade Islands brand identity — Atrament and Helvetica type specimens on yellow, and the brand colour palette over a tea field",
+};
+
 const galleryImages = [
   heroImage,
   packagingImage,
   ...flavourCans.map((c) => ({ src: c.asset, alt: c.alt })),
+  brandBoardImage,
 ];
 
 export const Route = createFileRoute("/work/trade-islands-iced-tea")({
@@ -201,6 +208,36 @@ function TradeIslandsPage() {
                 </div>
               ))}
             </div>
+
+            {/* Brand identity section */}
+            <div className="mt-8">
+              <h2 className="font-sans text-5xl font-bold tracking-tight md:text-7xl">
+                Brand identity
+              </h2>
+              <p className="mt-8 text-[11px] font-medium tracking-wide text-muted-foreground">
+                DESCRIPTION
+              </p>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed md:text-base">
+                The identity pairs two typefaces with a warm, sun-soaked palette. Atrament leads the
+                bold, condensed headlines while Helvetica keeps everything else clean and legible —
+                the yellow, orange, lilac and soft grey are pulled straight from the islands and carry
+                across cans, patterns and the website.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => open(5)}
+              aria-label="Open fullscreen image"
+              className="mt-8 block w-full cursor-zoom-in"
+            >
+              <img
+                src={brandBoardImage.src}
+                alt={brandBoardImage.alt}
+                width={1920}
+                height={942}
+                className="w-full rounded-[24px] object-cover transition-opacity hover:opacity-90"
+              />
+            </button>
 
             {/* Packaging section */}
             <div className="mt-8">
