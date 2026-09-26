@@ -275,10 +275,10 @@ function Index() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {/* Spark */}
             <div className="flex flex-col rounded-[1.75rem] bg-white p-8">
-              <h3 className="text-lg font-semibold">Spark</h3>
+              <h3 className="text-lg font-semibold">Custom Package</h3>
               <p className="mt-1 text-sm text-muted-foreground">For startups and small ventures.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
-                $2,400
+                $1,000
                 <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
               </div>
               <hr className="my-6 border-foreground/10" />
@@ -298,10 +298,10 @@ function Index() {
                 <Sparkles className="h-3 w-3" /> Recommended
               </span>
               <div className="flex h-full flex-col rounded-[calc(2rem-2px)] bg-white p-8">
-              <h3 className="text-lg font-semibold">Story</h3>
+              <h3 className="text-lg font-semibold">Branding Package</h3>
               <p className="mt-1 text-sm text-muted-foreground">Deep identity and collateral.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
-                $4,800
+                $1,500
                 <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
               </div>
               <hr className="my-6 border-foreground/10" />
@@ -318,10 +318,10 @@ function Index() {
 
             {/* Bloom */}
             <div className="flex flex-col rounded-[1.75rem] bg-white p-8">
-              <h3 className="text-lg font-semibold">Bloom</h3>
+              <h3 className="text-lg font-semibold">Branding + UI/UX</h3>
               <p className="mt-1 text-sm text-muted-foreground">The full garden, end to end.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
-                $8,900
+                $3,000
                 <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
               </div>
               <hr className="my-6 border-foreground/10" />
