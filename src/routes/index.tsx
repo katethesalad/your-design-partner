@@ -278,7 +278,7 @@ function Index() {
               <h3 className="text-lg font-semibold">Custom Package</h3>
               <p className="mt-1 text-sm text-muted-foreground">For startups and small ventures.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
-                <span className="mr-1.5 text-sm font-normal text-muted-foreground">Starting from</span>
+                <span className="block text-sm font-normal text-muted-foreground">Starting from</span>
                 $300
                 <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
               </div>
