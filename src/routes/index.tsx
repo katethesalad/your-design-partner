@@ -276,21 +276,22 @@ function Index() {
             {/* Spark */}
             <div className="flex flex-col rounded-[1.75rem] bg-white p-8">
               <h3 className="text-lg font-semibold">Custom Package</h3>
-              <p className="mt-1 text-sm text-muted-foreground">For startups and small ventures.</p>
+              <p className="mt-1 text-sm text-muted-foreground">Build your own package — pick only what you need.</p>
               <div className="mt-5 text-4xl font-semibold tracking-tight">
                 <span className="block text-sm font-normal text-muted-foreground">Starting from</span>
                 $300
                 <span className="ml-1 text-sm font-normal text-muted-foreground">USD</span>
               </div>
               <hr className="my-6 border-foreground/10" />
-              <p className="text-xs font-medium text-muted-foreground">What's included:</p>
-              <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
-                {["Core Identity Pack", "Colour & Type Guide", "Primary Wordmark"].map((f) => (
-                  <li key={f} className="flex items-center gap-2.5">
-                    <Check className="h-3.5 w-3.5 shrink-0 text-foreground" /> {f}
+              <p className="text-xs font-medium text-muted-foreground">Mix &amp; match any of:</p>
+              <ul className="mt-3 flex flex-wrap gap-2 text-xs">
+                {["Logo", "Colour Palette", "Typography", "Business Cards", "Social Media Kit", "Illustrations", "Packaging", "Stationery"].map((f) => (
+                  <li key={f} className="rounded-full border border-foreground/15 px-3 py-1 text-foreground/80">
+                    {f}
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-xs text-muted-foreground">e.g. just a logo, or logo + colours + business cards.</p>
             </div>
 
             {/* Story — recommended */}
