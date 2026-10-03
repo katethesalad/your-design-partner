@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import artOne from "@/assets/art-1.jpg";
-import artTwo from "@/assets/art-2.jpg";
-import artFour from "@/assets/art-4.jpg";
+import art1 from "@/assets/art-piece-1.jpg";
+import art2 from "@/assets/art-piece-2.jpg";
+import art3 from "@/assets/art-piece-3.jpg";
+import art4 from "@/assets/art-piece-4.jpg";
+import art5 from "@/assets/art-piece-5.jpg";
 
 export const Route = createFileRoute("/art")({
   head: () => ({
@@ -24,9 +26,11 @@ export const Route = createFileRoute("/art")({
 });
 
 const artworks = [
-  { src: artOne, alt: "Abstract botanical illustration", shape: "md:col-span-2" },
-  { src: artTwo, alt: "Colourful hand-drawn art study", shape: "" },
-  { src: artFour, alt: "Playful organic illustration", shape: "" },
+  { src: art1, alt: "Artwork by Kate 1", shape: "md:col-span-2" },
+  { src: art2, alt: "Artwork by Kate 2", shape: "" },
+  { src: art3, alt: "Artwork by Kate 3", shape: "" },
+  { src: art4, alt: "Artwork by Kate 4", shape: "" },
+  { src: art5, alt: "Artwork by Kate 5", shape: "" },
 ];
 
 function ArtPage() {
