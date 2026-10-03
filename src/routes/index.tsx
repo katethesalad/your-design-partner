@@ -295,8 +295,8 @@ function Index() {
             </div>
 
             {/* Story — recommended */}
-            <div className="relative rounded-[2rem] bg-[linear-gradient(120deg,#e0ad34,#cbaed3,#f58127,#cbaed3,#e0ad34)] p-[2px] shadow-[0_24px_55px_-20px_rgba(0,0,0,0.22)] md:-mt-5">
-              <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gradient-to-r from-[#e0ad34] via-[#cbaed3] to-[#f58127] px-4 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
+            <div className="relative rounded-[2rem] bg-[#cbaed3] bg-[radial-gradient(at_0%_0%,#e0ad34_0px,transparent_55%),radial-gradient(at_100%_0%,#cbaed3_0px,transparent_55%),radial-gradient(at_100%_100%,#f58127_0px,transparent_55%),radial-gradient(at_0%_100%,#cbaed3_0px,transparent_55%),radial-gradient(at_50%_50%,#e0ad34_0px,transparent_60%)] p-[2px] shadow-[0_24px_55px_-20px_rgba(0,0,0,0.22)] md:-mt-5">
+              <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-[#cbaed3] bg-[radial-gradient(at_0%_0%,#e0ad34_0px,transparent_60%),radial-gradient(at_100%_100%,#f58127_0px,transparent_60%),radial-gradient(at_100%_0%,#cbaed3_0px,transparent_50%)] px-4 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
                 <Sparkles className="h-3 w-3" /> Recommended
               </span>
               <div className="flex h-full flex-col rounded-[calc(2rem-2px)] bg-white p-8">
