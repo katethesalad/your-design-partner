@@ -79,7 +79,7 @@ export function SiteHeader() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="rounded-2xl px-2 py-3 font-display text-2xl italic"
+                className="rounded-2xl px-2 py-3 font-sans text-2xl"
                 activeProps={{ className: "text-primary" }}
               >
                 {l.label}
