@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { LayoutGrid } from "lucide-react";
 import tradeIslands from "@/assets/trade-islands.png";
 import sonaraBudha from "@/assets/sonara-budha.png";
+import krussRealEstate from "@/assets/kruss-real-estate.png";
 
 function ArrowBadge() {
   return (
@@ -93,14 +94,18 @@ export function FeaturedWork() {
 
             {/* Column 3 — two stacked cards */}
             <div className="flex flex-col gap-4">
-              <article className="rounded-[24px] bg-background p-6">
-                <h3 className="font-display text-xl leading-tight">
-                  Kindred Coffee <br /> Packaging
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed">
-                  A kraft-and-ink range for{" "}
-                  <span className="text-primary">a small-batch roastery</span> — labels, bags and a
-                  hand-lettered wordmark.
+              <article className="rounded-[24px] bg-background p-4">
+                <img
+                  src={krussRealEstate}
+                  alt="Kruss Real Estate rebranding"
+                  loading="lazy"
+                  className="aspect-[16/9] w-full rounded-[18px] object-cover"
+                />
+                <h3 className="mt-4 font-display text-xl leading-tight">Kruss Real Estate</h3>
+                <p className="mt-3 text-sm leading-relaxed">
+                  A rebranding for{" "}
+                  <span className="text-primary">a real estate company in Mombasa</span> — a fresh,
+                  trustworthy identity for homes by the coast.
                 </p>
                 <div className="mt-6 flex items-center justify-between">
                   <Link to="/work" className="text-sm font-medium">
