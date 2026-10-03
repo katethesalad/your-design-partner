@@ -237,6 +237,25 @@
   }
 }
 
+/* Hero confetti: bigger on mobile */
+@media (max-width: 767px) {
+  header .confetti-triangle {
+    width: 0.55rem;
+    height: 0.55rem;
+  }
+
+  header .confetti-pill {
+    width: 0.45rem;
+    height: 1.1rem;
+  }
+
+  header .confetti-pinched,
+  header .confetti-starburst {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+}
+
 @media (min-width: 768px) {
   .confetti-triangle {
     width: 0.8rem;
