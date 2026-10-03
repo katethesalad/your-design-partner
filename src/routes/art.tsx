@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { LightboxGallery } from "@/components/lightbox";
 import art1 from "@/assets/art-piece-1.jpg";
 import art2 from "@/assets/art-piece-2.jpg";
 import art3 from "@/assets/art-piece-3.jpg";
@@ -41,11 +42,16 @@ function ArtPage() {
         <p className="mt-6 max-w-[44ch] text-pretty text-lg leading-relaxed text-muted-foreground">
           Personal drawings, colour studies and ideas made away from client work.
         </p>
+        <LightboxGallery images={artworks}>
+        {(open) => (
         <div className="mt-16 grid gap-6 md:grid-cols-2">
-          {artworks.map((art) => (
-            <figure
+          {artworks.map((art, i) => (
+            <button
+              type="button"
+              onClick={() => open(i)}
+              aria-label={`View ${art.alt} full screen`}
               key={art.src}
-              className={`overflow-hidden rounded-[2rem] bg-card ring-1 ring-foreground/5 ${art.shape}`}
+              className={`block cursor-zoom-in overflow-hidden rounded-[2rem] bg-card ring-1 ring-foreground/5 ${art.shape}`}
             >
               <img
                 src={art.src}
@@ -53,9 +59,11 @@ function ArtPage() {
                 loading="lazy"
                 className="h-full max-h-[48rem] w-full object-cover"
               />
-            </figure>
+            </button>
           ))}
         </div>
+        )}
+        </LightboxGallery>
       </div>
     </main>
   );
