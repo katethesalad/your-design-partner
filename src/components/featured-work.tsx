@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { LayoutGrid } from "lucide-react";
 import tradeIslands from "@/assets/trade-islands.png";
 import sonaraBudha from "@/assets/sonara-budha.png";
 
@@ -109,24 +110,25 @@ export function FeaturedWork() {
                 </div>
               </article>
 
-              <article className="flex flex-col justify-between rounded-[24px] bg-background p-6">
+              <Link
+                to="/work"
+                className="group flex flex-1 flex-col justify-between rounded-[24px] bg-background p-6 transition-shadow hover:shadow-md"
+              >
                 <div className="flex items-center justify-between">
                   <span className="grid size-10 place-items-center rounded-full bg-primary text-primary-foreground">
-                    <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                      <path d="M4 14v-2a8 8 0 1 1 16 0v2" strokeLinecap="round" />
-                      <rect x="2.5" y="13" width="4" height="6" rx="2" fill="currentColor" stroke="none" />
-                      <rect x="17.5" y="13" width="4" height="6" rx="2" fill="currentColor" stroke="none" />
-                    </svg>
+                    <LayoutGrid className="size-5" strokeWidth={1.8} />
                   </span>
-                  <svg viewBox="0 0 40 24" className="h-5 w-10 text-lilac" fill="none" stroke="currentColor" strokeWidth="3">
+                  <svg viewBox="0 0 40 24" className="h-5 w-10 text-lilac transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="3">
                     <path d="M4 6l6 6-6 6M16 6l6 6-6 6M28 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <p className="mt-6 text-sm leading-relaxed">
-                  <span className="text-muted-foreground">The studio which promises to</span> make
-                  your brand feel handmade and human.
-                </p>
-              </article>
+                <div className="mt-6">
+                  <h3 className="font-display text-xl leading-tight">View more projects</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    Explore the full portfolio of brands, packaging and illustration.
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
