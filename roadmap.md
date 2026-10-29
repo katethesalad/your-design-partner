@@ -12,3 +12,4 @@
 - [x] Tighten landing-page section spacing, enlarge the uploaded logo, and animate matching hero confetti
 - [x] Reduce the header logo and replace round/square confetti with triangle, pinched-square, and starburst shapes
 - [x] Remove the pricing/investment section from the landing page and delete the Pricing page
+- [x] Remove the week durations from the landing page process rows
