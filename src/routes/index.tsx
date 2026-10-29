@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Check, Sparkles, Phone, ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 import { FeaturedWork } from "@/components/featured-work";
 import { cn } from "@/lib/utils";
 
@@ -11,13 +11,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Independent graphic designer creating tactile, illustration-led brand identities. See selected work, my design process and pricing.",
+          "Independent graphic designer creating tactile, illustration-led brand identities. See selected work, my design process, and how to start a project.",
       },
       { property: "og:title", content: "Kate" },
       {
         property: "og:description",
         content:
-          "Independent graphic designer creating tactile, illustration-led brand identities. See selected work, my design process and pricing.",
+          "Independent graphic designer creating tactile, illustration-led brand identities. See selected work, my design process, and how to start a project.",
       },
     ],
   }),
