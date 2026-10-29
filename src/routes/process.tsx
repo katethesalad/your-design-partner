@@ -80,19 +80,12 @@ function ProcessPage() {
         <div className="mt-16 rounded-[2rem] bg-forest p-10 text-center text-forest-foreground">
           <h2 className="font-sans text-3xl italic">Sound like a good fit?</h2>
           <p className="mx-auto mt-3 max-w-[40ch] text-pretty opacity-80">
-            Have a look at what each kind of project costs, or just send me a note about what you're
-            making.
+            Send me a note about what you're making and we'll take it from there.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
-              to="/pricing"
-              className="rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground"
-            >
-              See pricing
-            </Link>
-            <Link
               to="/contact"
-              className="rounded-full border border-background/20 px-6 py-3 text-sm font-medium"
+              className="rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground"
             >
               Get in touch
             </Link>

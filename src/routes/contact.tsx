@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -38,12 +38,6 @@ function ContactPage() {
         >
           katekhanbek@gmail.com
         </a>
-        <Link
-          to="/pricing"
-          className="mt-6 inline-block font-mono text-xs text-muted-foreground underline decoration-foreground/20 underline-offset-4 hover:text-foreground"
-        >
-          View pricing first
-        </Link>
       </div>
     </main>
   );

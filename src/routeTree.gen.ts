@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ArtRouteImport } from './routes/art'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as WorkIndexRouteImport } from './routes/work.index'
@@ -31,11 +30,6 @@ const ArtRoute = ArtRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PricingRoute = PricingRouteImport.update({
-  id: '/pricing',
-  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProcessRoute = ProcessRouteImport.update({
@@ -63,7 +57,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/art': typeof ArtRoute
   '/contact': typeof ContactRoute
-  '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
   '/work': typeof WorkRouteWithChildren
   '/work/trade-islands-iced-tea': typeof WorkTradeIslandsIcedTeaRoute
@@ -73,7 +66,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/art': typeof ArtRoute
   '/contact': typeof ContactRoute
-  '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
   '/work/trade-islands-iced-tea': typeof WorkTradeIslandsIcedTeaRoute
   '/work': typeof WorkIndexRoute
@@ -83,7 +75,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/art': typeof ArtRoute
   '/contact': typeof ContactRoute
-  '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
   '/work': typeof WorkRouteWithChildren
   '/work/trade-islands-iced-tea': typeof WorkTradeIslandsIcedTeaRoute
@@ -95,7 +86,6 @@ export interface FileRouteTypes {
     | '/'
     | '/art'
     | '/contact'
-    | '/pricing'
     | '/process'
     | '/work'
     | '/work/trade-islands-iced-tea'
@@ -105,7 +95,6 @@ export interface FileRouteTypes {
     | '/'
     | '/art'
     | '/contact'
-    | '/pricing'
     | '/process'
     | '/work/trade-islands-iced-tea'
     | '/work'
@@ -114,7 +103,6 @@ export interface FileRouteTypes {
     | '/'
     | '/art'
     | '/contact'
-    | '/pricing'
     | '/process'
     | '/work'
     | '/work/trade-islands-iced-tea'
@@ -125,7 +113,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArtRoute: typeof ArtRoute
   ContactRoute: typeof ContactRoute
-  PricingRoute: typeof PricingRoute
   ProcessRoute: typeof ProcessRoute
   WorkRoute: typeof WorkRouteWithChildren
 }
@@ -151,13 +138,6 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pricing': {
-      id: '/pricing'
-      path: '/pricing'
-      fullPath: '/pricing'
-      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/process': {
@@ -207,7 +187,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArtRoute: ArtRoute,
   ContactRoute: ContactRoute,
-  PricingRoute: PricingRoute,
   ProcessRoute: ProcessRoute,
   WorkRoute: WorkRouteWithChildren,
 }
