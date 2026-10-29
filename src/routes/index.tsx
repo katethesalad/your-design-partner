@@ -118,12 +118,9 @@ function ProcessSection() {
           >
             <span className={cn("mt-1 size-4 shrink-0", p.shape, p.color)} aria-hidden="true" />
             <div className="min-w-0 flex-1">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <span className="text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
-                  {p.phase}
-                </span>
-                <span className="text-xs text-muted-foreground">{p.duration}</span>
-              </div>
+              <span className="text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
+                {p.phase}
+              </span>
               <h3 className="mt-1.5 font-sans text-xl font-semibold">{p.title}</h3>
               <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-muted-foreground">
                 {p.desc}
