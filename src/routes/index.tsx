@@ -1,6 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { Check } from "lucide-react";
 import { FeaturedWork } from "@/components/featured-work";
 import { cn } from "@/lib/utils";
 
@@ -103,9 +101,6 @@ const phases = [
 ];
 
 function ProcessSection() {
-  const [active, setActive] = useState(0);
-  const current = phases[active]!;
-
   return (
     <section className="px-4 pt-14 pb-10 sm:px-6">
       <div className="text-center">
@@ -115,100 +110,36 @@ function ProcessSection() {
       </div>
       <h2 className="mb-12 mt-6 text-center font-sans text-4xl font-semibold tracking-tight sm:text-5xl">My Process</h2>
 
-      <div className="relative mx-auto max-w-6xl">
-        <div className="relative overflow-x-auto px-2 pb-8 pt-2 snap-x sm:px-6">
-          <div className="relative flex min-w-max items-start justify-between gap-6 py-16">
-            <svg
-              className="pointer-events-none absolute inset-x-0 top-1/2 h-60 w-full -translate-y-1/2"
-              viewBox="0 0 1000 240"
-              preserveAspectRatio="none"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <defs>
-                <linearGradient id="processWave" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#e0ad34" />
-                  <stop offset="50%" stopColor="#cbaed3" />
-                  <stop offset="100%" stopColor="#f58127" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M0 120 C 125 20, 125 220, 250 120 C 375 20, 375 220, 500 120 C 625 20, 625 220, 750 120 C 875 20, 875 220, 1000 120"
-                stroke="url(#processWave)"
-                strokeWidth="2.5"
-              />
-            </svg>
-
-            {phases.map((p, i) => {
-              const isActive = active === i;
-              const isUp = i % 2 === 0;
-              return (
-                <button
-                  key={p.phase}
-                  onClick={() => setActive(i)}
-                  className={cn(
-                    "group relative flex min-w-[170px] flex-1 snap-start flex-col items-center text-center transition-transform duration-300",
-                    isUp ? "-translate-y-10 hover:-translate-y-12" : "translate-y-10 hover:translate-y-12"
-                  )}
-                >
-                  <span
-                    className={cn(
-                      "rounded-full px-4 py-1.5 text-[11px] font-medium uppercase tracking-wide transition-colors text-foreground",
-                      isActive ? p.color : p.colorMuted
-                    )}
-                  >
-                    {p.phase}
-                  </span>
-
-                  <span
-                    className={cn(
-                      "relative z-10 mt-4 size-12 transition-all",
-                      p.shape,
-                      p.color,
-                      isActive
-                        ? "scale-110 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.25)]"
-                        : "opacity-80 hover:scale-105"
-                    )}
-                    aria-hidden="true"
-                  />
-
-                  <span className="mt-5 block text-sm font-semibold uppercase tracking-wide">
-                    {p.title}
-                  </span>
-                  <span className="mt-1 block text-xs text-muted-foreground">
-                    {p.duration}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        <div
-          key={active}
-          className="mt-2 rounded-[2rem] bg-card p-6 ring-1 ring-foreground/5 animate-fade-in sm:p-8"
-        >
-          <h3 className="font-sans text-2xl font-semibold">{current.title}</h3>
-          <p className="mt-2 text-sm text-muted-foreground">{current.desc}</p>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-            {current.details.map((detail) => (
-              <li key={detail} className="flex items-start gap-3 text-sm">
-                <Check className="mt-0.5 size-4 shrink-0 text-primary" />
-                {detail}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-10 text-center">
-          <Link
-            to="/process"
-            className="inline-flex rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground ring-1 ring-foreground/10 transition-colors hover:bg-secondary"
+      <div className="mx-auto max-w-6xl space-y-4">
+        {phases.map((p) => (
+          <div
+            key={p.phase}
+            className="flex items-start gap-4 rounded-[1.75rem] bg-card p-6 ring-1 ring-foreground/5 sm:p-7"
           >
-            See the full process
-          </Link>
-        </div>
+            <span className={cn("mt-1 size-4 shrink-0", p.shape, p.color)} aria-hidden="true" />
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <span className="text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
+                  {p.phase}
+                </span>
+                <span className="text-xs text-muted-foreground">{p.duration}</span>
+              </div>
+              <h3 className="mt-1.5 font-sans text-xl font-semibold">{p.title}</h3>
+              <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-muted-foreground">
+                {p.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-10 text-center">
+        <Link
+          to="/process"
+          className="inline-flex rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground ring-1 ring-foreground/10 transition-colors hover:bg-secondary"
+        >
+          See the full process
+        </Link>
       </div>
     </section>
   );
