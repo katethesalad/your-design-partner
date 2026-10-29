@@ -1,11 +1,24 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 
 const links = [
-  { to: "/work", label: "Work" },
-  { to: "/process", label: "Process" },
-  { to: "/art", label: "Art" },
+  { to: "/work", hash: "", label: "Work" },
+  { to: "/", hash: "process", label: "Process" },
+  { to: "/art", hash: "", label: "Art" },
 ] as const;
+
+type NavLink = (typeof links)[number];
+
+function scrollToProcess(e: MouseEvent) {
+  const el = document.getElementById("process");
+  if (!el) return;
+  e.preventDefault();
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+const onNavClick = (l: NavLink) => (e: MouseEvent) => {
+  if (l.hash === "process") scrollToProcess(e);
+};
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -30,10 +43,13 @@ export function SiteHeader() {
         <div className="hidden items-center gap-6 text-sm font-medium md:flex">
           {links.map((l) => (
             <Link
-              key={l.to}
+              key={l.label}
               to={l.to}
+              hash={l.hash}
+              onClick={onNavClick(l)}
               className="transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
+              activeOptions={{ includeHash: true }}
             >
               {l.label}
             </Link>
@@ -75,11 +91,16 @@ export function SiteHeader() {
           <div className="flex flex-col gap-1">
             {links.map((l) => (
               <Link
-                key={l.to}
+                key={l.label}
                 to={l.to}
-                onClick={() => setOpen(false)}
+                hash={l.hash}
+                onClick={(e) => {
+                  setOpen(false);
+                  onNavClick(l)(e);
+                }}
                 className="rounded-2xl px-2 py-3 font-sans text-2xl"
                 activeProps={{ className: "text-primary" }}
+                activeOptions={{ includeHash: true }}
               >
                 {l.label}
               </Link>

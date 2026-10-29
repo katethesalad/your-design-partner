@@ -1,4 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, useRouterState } from "@tanstack/react-router";
+import { useEffect } from "react";
+
 import { FeaturedWork } from "@/components/featured-work";
 import { cn } from "@/lib/utils";
 
@@ -102,7 +104,7 @@ const phases = [
 
 function ProcessSection() {
   return (
-    <section className="px-4 pt-14 pb-10 sm:px-6">
+    <section id="process" className="scroll-mt-28 px-4 pt-14 pb-10 sm:px-6">
       <div className="text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-1.5 text-[11px] font-medium tracking-wide text-muted-foreground">
           02 <span className="inline-block h-1.5 w-1.5 rounded-full bg-foreground" /> PROCESS
@@ -129,22 +131,27 @@ function ProcessSection() {
           </div>
         ))}
       </div>
-
-      <div className="mt-10 text-center">
-        <Link
-          to="/process"
-          className="inline-flex rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground ring-1 ring-foreground/10 transition-colors hover:bg-secondary"
-        >
-          See the full process
-        </Link>
-      </div>
     </section>
   );
 }
 
 function Index() {
+  const hash = useRouterState({ select: (s) => s.location.hash });
+
+  useEffect(() => {
+    if (hash !== "#process") return;
+    const el = document.getElementById("process");
+    if (!el) return;
+    const id = window.setTimeout(
+      () => el.scrollIntoView({ behavior: "smooth", block: "start" }),
+      80,
+    );
+    return () => window.clearTimeout(id);
+  }, [hash]);
+
   return (
     <main>
+
       <header className="relative flex flex-col items-center overflow-hidden px-6 pb-10 pt-8 text-center">
         <div className="blob-shape absolute -left-20 top-0 -z-10 size-64 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-petal opacity-60 blur-xl" />
         <div className="blob-shape absolute -right-10 top-20 -z-10 size-48 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-sun opacity-60 blur-xl [animation-delay:2s]" />
