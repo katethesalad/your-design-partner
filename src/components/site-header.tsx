@@ -2,14 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState, type MouseEvent } from "react";
 
 const links = [
-  { to: "/work", label: "Work" },
+  { to: "/work", hash: "", label: "Work" },
   { to: "/", hash: "process", label: "Process" },
-  { to: "/art", label: "Art" },
+  { to: "/art", hash: "", label: "Art" },
 ] as const;
 
 type NavLink = (typeof links)[number];
-
-const isHashLink = (l: NavLink): l is Extract<NavLink, { hash: string }> => "hash" in l;
 
 function scrollToProcess(e: MouseEvent) {
   const el = document.getElementById("process");
@@ -17,6 +15,10 @@ function scrollToProcess(e: MouseEvent) {
   e.preventDefault();
   el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+
+const onNavClick = (l: NavLink) => (e: MouseEvent) => {
+  if (l.hash === "process") scrollToProcess(e);
+};
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -43,11 +45,11 @@ export function SiteHeader() {
             <Link
               key={l.label}
               to={l.to}
-              hash={isHashLink(l) ? l.hash : undefined}
-              onClick={isHashLink(l) ? scrollToProcess : undefined}
+              hash={l.hash}
+              onClick={onNavClick(l)}
               className="transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
-              activeOptions={isHashLink(l) ? { includeHash: true } : undefined}
+              activeOptions={{ includeHash: true }}
             >
               {l.label}
             </Link>
@@ -91,14 +93,14 @@ export function SiteHeader() {
               <Link
                 key={l.label}
                 to={l.to}
-                hash={isHashLink(l) ? l.hash : undefined}
+                hash={l.hash}
                 onClick={(e) => {
                   setOpen(false);
-                  if (isHashLink(l)) scrollToProcess(e);
+                  onNavClick(l)(e);
                 }}
                 className="rounded-2xl px-2 py-3 font-sans text-2xl"
                 activeProps={{ className: "text-primary" }}
-                activeOptions={isHashLink(l) ? { includeHash: true } : undefined}
+                activeOptions={{ includeHash: true }}
               >
                 {l.label}
               </Link>
