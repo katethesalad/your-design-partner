@@ -85,7 +85,7 @@ export function FeaturedWork() {
                 elegant packaging and brand identity.
               </p>
               <div className="mt-auto flex items-center justify-between pt-6">
-                <Link to="/work" className="text-sm font-medium">
+                <Link to="/work/$slug" params={{ slug: "sonara-budha" }} className="text-sm font-medium">
                   Read More
                 </Link>
                 <ArrowBadge />
@@ -108,7 +108,7 @@ export function FeaturedWork() {
                   trustworthy identity for homes by the coast.
                 </p>
                 <div className="mt-6 flex items-center justify-between">
-                  <Link to="/work" className="text-sm font-medium">
+                  <Link to="/work/$slug" params={{ slug: "kruss-real-estate" }} className="text-sm font-medium">
                     Read More
                   </Link>
                   <ArrowBadge />
