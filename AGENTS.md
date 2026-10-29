@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Project case studies (except Trade Islands, which has its own route file) are data in src/lib/projects.ts rendered by src/routes/work.$slug.tsx — add new projects by adding data, so every page keeps the same layout.
