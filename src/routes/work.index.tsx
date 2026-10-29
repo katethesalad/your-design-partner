@@ -1,8 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import workMeadow from "@/assets/work-meadow.jpg";
-import workCity from "@/assets/work-city.jpg";
-import workKindred from "@/assets/work-kindred.jpg";
-import workEditorial from "@/assets/work-editorial.jpg";
+import { projects as caseStudies, tagColors } from "@/lib/projects";
 import tradeIslands from "@/assets/trade-islands.png";
 
 export const Route = createFileRoute("/work/")({
@@ -36,36 +33,18 @@ const projects = [
     body: "A full rebranding for a lemon iced tea, from logo and packaging to a bold lilac-and-gold visual identity.",
     image: tradeIslands,
     tint: "bg-sand",
-    to: "/work/trade-islands-iced-tea",
+    to: "/work/trade-islands-iced-tea" as const,
+    params: undefined as { slug: string } | undefined,
   },
-  {
-    title: "Meadow & Grain",
-    meta: "Identity, Illustration — 2024",
-    body: "A full visual identity for a slow-living florist collective, built from hand-drawn botanical marks and a soft paper palette.",
-    image: workMeadow,
-    tint: "bg-sky",
-  },
-  {
-    title: "City Rhythms",
-    meta: "Editorial Design — 2023",
-    body: "A two-ink risograph zine series exploring the shapes of a city at night, printed in short runs on uncoated stock.",
-    image: workCity,
-    tint: "bg-petal",
-  },
-  {
-    title: "Kindred Coffee",
-    meta: "Packaging — 2025",
-    body: "Kraft-and-ink packaging for a small-batch roastery, including labels, bags and a hand-lettered wordmark.",
-    image: workKindred,
+  ...caseStudies.map((p) => ({
+    title: p.title,
+    tags: p.tags.map((label) => ({ label, color: tagColors[label] ?? "bg-[#D9DAD9]" })),
+    body: p.summary,
+    image: p.hero.src,
     tint: "bg-sand",
-  },
-  {
-    title: "Field Notes Quarterly",
-    meta: "Art Direction — 2025",
-    body: "Layout system and illustrated section openers for an independent quarterly about growing things slowly.",
-    image: workEditorial,
-    tint: "bg-sun",
-  },
+    to: "/work/$slug" as const,
+    params: { slug: p.slug },
+  })),
 ];
 
 function WorkPage() {
@@ -125,7 +104,7 @@ function WorkPage() {
               </div>
             );
             return p.to ? (
-              <Link key={p.title} to={p.to} className="group">
+              <Link key={p.title} to={p.to} params={p.params as never} className="group">
                 {card}
               </Link>
             ) : (
