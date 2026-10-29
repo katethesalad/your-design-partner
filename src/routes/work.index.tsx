@@ -77,7 +77,7 @@ function WorkPage() {
                 </div>
                 <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
                   <div>
-                    {p.tags ? (
+                    
                       <div className="mb-3 flex flex-wrap gap-2">
                         {p.tags.map((t) => (
                           <span
@@ -88,13 +88,11 @@ function WorkPage() {
                           </span>
                         ))}
                       </div>
-                    ) : (
-                      <p className="text-sm text-muted-foreground">{p.meta}</p>
-                    )}
+                    
                     <h2 className="font-sans text-2xl md:text-3xl">{p.title}</h2>
                     <p className="mt-3 max-w-[55ch] text-pretty leading-relaxed">{p.body}</p>
                   </div>
-                  {p.to && (
+                  {(
                     <span className="inline-flex items-center gap-2 text-sm font-medium">
                       View project
                       <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
@@ -103,14 +101,10 @@ function WorkPage() {
                 </div>
               </div>
             );
-            return p.to ? (
+            return (
               <Link key={p.title} to={p.to} params={p.params as never} className="group">
                 {card}
               </Link>
-            ) : (
-              <article key={p.title} className="group">
-                {card}
-              </article>
             );
           })}
         </div>
